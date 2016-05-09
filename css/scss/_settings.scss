@@ -1,26 +1,68 @@
 // COLORS
 // ---------------------------
-$blue: #3FA2FF;
-$blueD : #3D5067;
+
+$blue: 				#3FA2FF;
+$blueD:				#3d5067;
+$grey: 				#312829;
+$greyL: 			#bebebe;
+
 
 // FONTS
 // ---------------------------
+$rt:             'robotothin';
+$rb:             'robotobold';
+$ri:             'robotoitalic';
+$rt_i:           'robotothin_italic';
 
-
+$rslab_b:        'roboto_slabbold';
 html, body                    	{   height: 100%; font-family: $rcr;}
 p                             	{   color: $blueD;}
 h1, h2, h3, h4, h5, p         	{   color: $blueD;}
 .white                          {	color: #FFF;}
 
 
+$rcl:        'roboto_condensedlight';
+$rcli:       'roboto_condensedlight_italic';
+$rcb:        'roboto_condensedbold';
+$rcr:        'roboto_condensedregular';
+
+
+html, body {
+	height: 100%;
+	font-family: $rcr;
+}
+p {
+
+}
+h1,
+h2,
+h3,
+h4, 
+h5,
+p {
+
+}
+.white {
+	color: #FFF;
+}
+
 // lAYOUT
 // ---------------------------
 
-.wrapper                      	{   width: 1200px;
-								   	margin: 0 auto;
-                                   	text-align: center;
-                              	}
-header 							{}
-aside 							{}
-main 							{}
-footer 							{}
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
+header {
+
+}
+aside {
+
+}
+main {
+
+}
+footer {
+
+}

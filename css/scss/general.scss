@@ -96,9 +96,7 @@ header {
         z-index: 100;
         
         &.active {left: 0;}
-        
-        .wrapper {
-        }
+
     }
     .phone {
         @include position(absolute, 0, 35px, 0, auto);
@@ -224,31 +222,6 @@ nav ul {
 
 }
 
-
-
-
-/*---------------------- 
-    OFFER STYLES
-------------------------*/
-.offer {
-    height: 100%;
-    min-height: 650px;
-    max-height: 900px;
-    background: url('../images/law.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 80px 0 0 0;
-    position: relative;
-
-
-    .offerInfo {
-        height: 100%;
-        @include flex($alignI: center, $justify: space-around, $direction: column);
-        z-index: 2;
-        position: relative;
-        text-align: center;
-    }
-
-}
 
 
 /*---------------------- 
