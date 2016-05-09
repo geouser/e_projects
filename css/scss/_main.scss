@@ -1,0 +1,138 @@
+
+.weDo {
+	@include flex();
+	&__item {
+		width: 23%;
+		margin: 0 1%;
+		padding: 50px 0;
+		position: relative;
+		box-shadow: 0px 1px 3px 0px rgba( 0, 0, 0, .2 );
+		background-color: #FCFDFD;
+		@include transition(all, .2s);
+		-webkit-border-radius: 5px;
+		        border-radius: 5px;
+		&:hover {
+			@include transform(scale(1.1));
+			background-color: #FFF;
+			a {opacity: 1;}
+		}
+		&:before {
+			content: attr(data-order);
+			display: block;
+			@include position(absolute, 14px, auto, auto, 14px);
+			color: #A5A5A5;
+			font: 16px $rcl;
+		}
+		&__imgWrap {
+			height: 100px;
+			width: 110px;
+			margin: 0 auto 15px;
+			position: relative;
+			overflow: visible;
+			text-align: center;
+			img {
+				@include position(absolute, 0, 0, auto, 0);
+				margin: auto;
+			}
+		}
+		&:nth-child(2) &__imgWrap img {left: 10px}
+		&:nth-child(4) &__imgWrap img {left: 18px}
+		h3 {
+			font: 22px $rcb;
+			color: $blueD;
+		}
+		a {
+			@include position(absolute, auto, 0, 15px, 0);
+			margin: auto;
+			font: 16px $rcli;
+			color: $blue;
+			opacity: 0;
+			@include transition(all, .2s);
+		}
+	}
+}
+
+
+
+.weRecommend {
+	width: 335px;
+	display: inline-block;
+	vertical-align: top;
+	h3 {
+		font: 22px $rcl; 
+		text-transform: uppercase; 
+		margin-bottom: 20px; 
+		color: $blueD; 
+		text-align: left;
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			background-image: url("../images/quote.png");
+			margin-right: 8px;
+			margin-left: -10px;
+			margin-top: 2px;
+			vertical-align: top;
+		}
+	}
+	&__item {
+		width: 100%;
+		padding: 23px 25px;
+		background-color: #FDFDFE;
+		box-shadow: 0px 1px 3px 0px rgba( 0, 0, 0, .2 );
+		-webkit-border-radius: 5px;
+		    border-radius: 5px;
+		margin-bottom: 15px;
+		text-align: left;
+		position: relative;
+		@include transition(all, .2s);
+		&:hover {
+			@include transform(scale(1.1));
+			background-color: #FFF;
+		}
+		&:hover h4      {text-decoration: none;}
+		&:hover h4 span {color: $blue;}
+		h4 {
+			font: 18px/22px $rcb;
+			margin-bottom: 15px;
+			text-decoration: underline;
+			color: #3FA2FF;
+			span {
+				color: $blueD;
+				padding-bottom: 2px;
+			}
+		}
+		p {
+			font: 16px/20px $rcli;
+			color: #6E6869;
+			margin-bottom: 20px;		
+		}
+		&__date ,
+		a {
+			@include position(absolute, auto, 10px, 5px, auto);
+			font: 16px/20px $rcli;
+			color: #BABABA;
+			@include transition(all, 0s);
+		}
+		a {
+			color: $blue;
+			opacity: 0;
+		}
+		&:hover &__date {opacity: 0;}
+		&:hover a {opacity: 1; @include transition(all, .4s);}	
+	}
+}
+
+
+.trustUs {
+	display: inline-block;
+	vertical-align: top;
+	width: 540px;
+	text-align: left;
+	margin-right: 70px;
+	h2 {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+}

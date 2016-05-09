@@ -13,11 +13,9 @@ $rt:             'robotothin';
 $rb:             'robotobold';
 $ri:             'robotoitalic';
 $rt_i:           'robotothin_italic';
-
 $rslab_b:        'roboto_slabbold';
+
 html, body                    	{   height: 100%; font-family: $rcr;}
-p                             	{   color: $blueD;}
-h1, h2, h3, h4, h5, p         	{   color: $blueD;}
 .white                          {	color: #FFF;}
 
 
@@ -50,7 +48,7 @@ p {
 // ---------------------------
 
 .wrapper {
-	width: 1200px;
+	width: 1000px;
 	margin: 0 auto;
 	text-align: center;
 }
