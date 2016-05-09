@@ -1,31 +1,63 @@
 // COLORS
 // ---------------------------
-$colorGrey: #3A3A3A;
-$colorBlue: #30A7E4;
-$colorBlueD: #062A41;
+$blue: 				#3FA2FF;
+$blue-dark:			#3d5067;
+$grey: 				#312829;
+$grey-light: 		#bebebe;
 
 
 // FONTS
 // ---------------------------
-$fontH: 24px/28px 'Helvetica';
-$fontSH: 22px/26px 'Helvetica';
-$fontT: 16px/22px 'Helvetica';
+$rob_t:             'robotothin';
+$rob_b:             'robotobold';
+$rob_i:             'robotoitalic';
+$rob_t_i:           'robotothin_italic';
+
+$rob_slab_b:        'roboto_slabbold';
+
+$rob_cond_l:        'roboto_condensedlight';
+$rob_cond_l_i:      'roboto_condensedlight_italic';
+$rob_cond_b:        'roboto_condensedbold';
+$rob_cond_r:        'roboto_condensedregular';
 
 
-html, body                    	{   height: 100%; font-family: $rob_cond_r;}
-p                             	{   color: $colorGrey;}
-h1, h2, h3, h4, h5, p         	{   color: $colorGrey;}
-.white                          {	color: #FFF;}
+html, body {
+	height: 100%;
+	font-family: $rob_cond_r;
+}
+p {
+
+}
+h1,
+h2,
+h3,
+h4, 
+h5,
+p {
+
+}
+.white {
+	color: #FFF;
+}
 
 
 // lAYOUT
 // ---------------------------
 
-.wrapper                      	{   width: 1200px;
-								   	margin: 0 auto;
-                                   	text-align: center;
-                              	}
-header 							{}
-aside 							{}
-main 							{}
-footer 							{}
+.wrapper {
+	width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
+header {
+
+}
+aside {
+
+}
+main {
+
+}
+footer {
+
+}
