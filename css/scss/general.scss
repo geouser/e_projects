@@ -51,23 +51,50 @@ $rob_cond_r:        'roboto_condensedregular';
 */
 
 /*---------------------- 
-    BUTTON STYLES
+    TYPOGRAPHY STYLES
 ------------------------*/
-
-.button {
-    height: 42px; 
-    padding: 0 17px; 
-    border: 1px solid #fff; 
-    background-color: transparent; 
-    color: #FFF; 
-    -webkit-border-radius: 10px;
-    border-radius: 6px; 
-    font: 18px 'helvetica';
-    cursor: pointer;
-    @include transition(all, .2s);
-    
-    &:hover {background-color: rgba(255,255,255, .2);}
+h1 {
+    font: 26px/32px $rb;
+    text-align: left;
+    text-transform: uppercase;
+    color: $blueD;
+    &:after {
+        content: "";
+        display: block;
+        width: 80px;
+        margin-top: 20px;
+        border-top: 1px solid #333333;
+    }
 }
+h2 {
+    font: 55px/60px $rcb;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 680px;
+    color: $blueD;
+}
+h3 {
+    font: 22px $rcb;
+    color:  #282828;
+}
+h4 {
+    color: #4D9AF0;
+    ont: 20px $rcb;
+}
+p {
+    font: 18px $rcl;
+    color: #282828;
+}
+.subtitle {
+    max-width: 680px;
+    display: block;
+    margin: 0 auto;
+    color: $blueD;
+    font: 20px/28px $rcl;
+}
+
 
 
 /*---------------------- 
@@ -80,7 +107,7 @@ header {
     z-index: 100;
     background: #fff;
     color: $blueD;
-    box-shadow: 0.5px 0.866px 2px 0px rgb( 0, 0, 0 );
+    box-shadow: 0.5px 0.866px 2px 0px rgba( 0, 0, 0, .2);
     .wrapper {
         height: 100%;
     }
@@ -107,36 +134,26 @@ header {
         }
 }
 
-.Фигура_18 {
-  background-color: rgb( 255, 255, 255 );
-  box-shadow: 0.5px 0.866px 2px 0px rgb( 0, 0, 0 );
-  position: absolute;
-  left: -193px;
-  top: -53px;
-  width: 2320px;
-  height: 131px;
-  z-index: 13;
-}
-
-
 .logo {
     @include position(absolute, 0, auto, 0, 45px);
     margin: auto;
     height: 30px;
 	display: inline-block;
-    font: 22px $rsb;
-    color: $blueD;
-    text-transform: uppercase;
-    span {
-        display: inline-block;
-        text-align: center;
-        background-color: $blue;
-        width: 30px;
-        color: #FFF;
-        font-style: normal;
-        margin-right: 3px;
-        -webkit-border-radius: 50%;
-                border-radius: 50%;
+    p {
+        font: 22px $rsb;
+        color: $blueD;
+        text-transform: uppercase;
+        span {
+            display: inline-block;
+            text-align: center;
+            background-color: $blue;
+            width: 30px;
+            color: #FFF;
+            font-style: normal;
+            margin-right: 3px;
+            -webkit-border-radius: 50%;
+                    border-radius: 50%;
+        }
     }
 }
 
@@ -150,8 +167,7 @@ nav ul {
     height: 100%;
 
     a {
-        font-size: 16px;
-        font-family: 'helvetica';
+        font: 18px $rcl;
         color: #3D5067;
         display: inline-block;
         padding: 7px 20px 6px;
@@ -223,32 +239,30 @@ nav ul {
 }
 
 
+/*---------------------- 
+    SECTION STYLES
+------------------------*/
+
+
 
 /*---------------------- 
-    INFOBLOCKS STYLES
+    BUTTON STYLES
 ------------------------*/
-.infoBlocks {
-    @include flex($alignI: top, $justify: center, $wrap: wrap);
-      
-    .infoBlock  {
-        margin-bottom: 20px;
-        padding: 0 20px;
-        text-align: center;
-        border: 1px solid peru;
 
-        &_icon {
-            width: 150px;
-            height: 150px;
-            text-align: center;
-            margin: 10px auto 15px;
-        }
-    }
-
-    &.--two  .infoBlock   {    width: 50%;}
-    &.--four .infoBlock   {    width: 25%;}
-    &.--three .infoBlock  {    width: 33%;}
+.button {
+    height: 42px; 
+    padding: 0 17px; 
+    border: 1px solid #fff; 
+    background-color: transparent; 
+    color: #FFF; 
+    -webkit-border-radius: 10px;
+    border-radius: 6px; 
+    font: 18px 'helvetica';
+    cursor: pointer;
+    @include transition(all, .2s);
+    
+    &:hover {background-color: rgba(255,255,255, .2);}
 }
-
 
 
 
