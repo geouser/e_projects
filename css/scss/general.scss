@@ -3,9 +3,10 @@
 @import 'slick-theme';
 @import 'settings-magnific';
 @import 'magnific-popup';
-
+@import 'fonts';
 @import 'settings';
 @import 'mixins';
+
 
 
 
@@ -32,6 +33,22 @@ CSS tooltip-----------  @include tooltiptooltip($content: attr(data-tooltip), $d
 
 */
 
+
+/* FONTS
+
+$rob_t:             'robotothin';
+$rob_b:             'robotobold';
+$rob_i:             'robotoitalic';
+$rob_t_i:           'robotothin_italic';
+
+$rob_slab_b:        'roboto_slabbold';
+
+$rob_cond_l:        'roboto_condensedlight';
+$rob_cond_l_i:      'roboto_condensedlight_italic';
+$rob_cond_b:        'roboto_condensedbold';
+$rob_cond_r:        'roboto_condensedregular';
+
+*/
 
 /*---------------------- 
     BUTTON STYLES
