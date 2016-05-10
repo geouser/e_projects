@@ -540,7 +540,7 @@ section {
          margin-top: 20px;
     }
 
-    &:after {
+    /*&:after {
      content: "";
      display: block;
      height: 40px;
@@ -559,7 +559,7 @@ section {
      -webkit-border-radius: 5px;
              border-radius: 5px;
      @include position(absolute, 0, 0, auto, 0 );   
-    }
+    }*/
 }
 .textBlock {
     background-color: #FFF;
