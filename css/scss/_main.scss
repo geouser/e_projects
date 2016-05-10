@@ -11,6 +11,7 @@
 		width: 23%;
 		margin: 0 1%;
 		padding: 50px 0;
+		margin-top: 60px;
 		position: relative;
 		@extend %shadow;  
 		background-color: #FCFDFD;
@@ -72,7 +73,7 @@
 		background-image: url("../images/comp_divide.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
-		margin-bottom: 100px;
+		margin-bottom: 70px;
 		@extend %clearfix;	  
 		&__item {
 			height: 95px;
@@ -165,6 +166,9 @@
 		}
 		&:hover &__date {opacity: 0;}
 		&:hover a {opacity: 1; @include transition(all, .4s);}	
+	}
+	.button {
+		margin-top: 20px;
 	}
 }
 
