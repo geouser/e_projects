@@ -57,14 +57,16 @@ h1 {
     font: 26px/32px $rb;
     text-align: left;
     text-transform: uppercase;
-    color: $blueD;
-    &:after {
+    color: $blueD;    &:after {
         content: "";
         display: block;
         width: 80px;
         margin-top: 20px;
         border-top: 1px solid #333333;
     }
+}
+article h1 {
+    margin-bottom: 25px;
 }
 h2 {
     font: 55px/60px $rcb;
@@ -85,6 +87,22 @@ h3 {
     font: 22px $rcb;
     color:  #282828;
 }
+article h3,
+article h4 {
+    margin-bottom: 25px;
+}
+figure {
+    figcaption {
+        margin: 5px 0 40px;
+        font: 14px $rti;
+        color: #939393;
+        text-align: center;
+    }
+    img {
+    width: 100%;
+    }
+}
+
 h4 {
     color: #4D9AF0;
     ont: 20px $rcb;
@@ -92,9 +110,13 @@ h4 {
 p {
     font: 18px $rcl;
     color: #282828;
+    margin-bottom: 22px;
     strong {
         font-family: $rcb;
     }
+}
+article p {
+    margin-bottom: 22px;
 }
 strong {
     font-weight: normal;
@@ -140,6 +162,24 @@ ul.list,
         }
     }
     &.plus li:before {background-image: url("../images/li_plus.png");}
+}
+blockquote {
+    width: 100%;
+    padding: 25px 60px;
+    border: 1px solid $blue;
+    color: $blue;
+    margin: 0 0 20px;
+    position: relative;
+    font: 16px $ri;
+    &:before {
+        content: "";
+        display: block;
+        @include position(absolute, 16px, auto, auto, 18px);
+        width: 25px; height: 20px;
+        background-image: url("../images/quote_sign.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
 }
 
 /*---------------------- 
@@ -598,6 +638,24 @@ section {
             font-family: $rcb;  
         } 
     }
+}
+
+.single .wrapper {
+    width: 1080px;
+}
+main {
+    width: 64%;
+    display: inline-block;
+    vertical-align: top;
+}
+article {
+    text-align: left;
+}
+aside {
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3%;
 }
 
 @import 'main';
