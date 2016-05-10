@@ -428,25 +428,29 @@ section {
 /*---------------------- 
     FULLPAGE STYLES
 ------------------------*/
-
+#fp-nav ul li {
+    margin: 15px 0!important;
+}
 #fp-nav ul li a, .fp-slidesNav ul li a {
+    margin: 0px!important;
+
     &.active span {
         background-color: $blue!important;
         border: 1px solid $blue!important;
     }
     span {
-         width: 12px!important;
-        height: 12px!important;
-        border: 1px solid #A5CFF8!important;
+        width: 14px!important;
+        height: 14px!important;
+        border: 2px solid #A5CFF8!important;
         cursor: pointer!important;
         -webkit-border-radius: 50%!important;
                 border-radius: 50%!important;
+        left: 0!important;
+        top: 0!important;
+        margin: 0!important;
+        background: transparent!important;
     }
 }
-#fp-nav ul li a, .fp-slidesNav ul li  {
-    margin: 14px!important;
-}
-
 
 /*---------------------- 
     TEXT BLOCK WITH SCROLLBAR STYLES
