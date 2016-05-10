@@ -95,7 +95,7 @@ strong {
 .subtitle {
     max-width: 680px;
     display: block;
-    margin: 0 auto;
+    margin: 12px auto 15px;
     color: $blueD;
     font: 20px/28px $rcl;
 }
@@ -110,7 +110,8 @@ strong {
     @include transition(all, .2s);
     width: 340px;
     padding: 17px 0 16px;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
     vertical-align: middle;
     text-align: center;
     border-radius: 5px;
@@ -129,7 +130,7 @@ strong {
     &.empty {
         border: 1px solid $blue;
         color: $blue;
-
+        background-color: transparent;
         &:hover {
             color: #fff;
             background-color: $blue;
@@ -338,16 +339,38 @@ nav ul {
     }
 }
 .slick-arrow {
-    border: 1px solid $blue;
     width: 65px; height: 65px;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
     -webkit-border-radius: 50%;
             border-radius: 50%;
     margin-top: -30px;
+    &:before {
+        display: none;   
+     }
     &.slick-prev {
         left: -110px;
+        background-image: url("../images/prev.png");
+        &:hover {
+           background-image: url("../images/prev.png");
+           background-size: 100% 100%;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
     }
     &.slick-next {
         right: -110px;
+        background-image: url("../images/next.png");
+        &:hover {
+           background-image: url("../images/next.png");
+           background-size: 100% 100%;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+    }
+    &:hover {
+        background-color: rgba(63, 162, 255, .2);
     }
 }
 
@@ -379,10 +402,8 @@ nav ul {
 ------------------------*/
 .scrollBarText {
     height: 430px;
-    margin-top: 50px;
     padding: 40px;
-
-    @extend %shadow;    
+    background-color: #FFF;
      .ps-scrollbar-y-rail {
         background-color: #D1D0D1 !important;
         right: 6px !important;
@@ -404,7 +425,11 @@ nav ul {
 .whitePadding{
     position: relative;
     background-color: #fff;
-    position: relative;
+    margin-top: 50px;
+    overflow: hidden;
+    @extend %shadow;
+    -webkit-border-radius: 5px;
+             border-radius: 5px;
     &:after {
      content: "";
      display: block;
