@@ -81,3 +81,55 @@
 		}
 	}
 }
+
+
+.reasons {
+	@include flex();
+	&__item {
+		width: 23%;
+		margin: 0 1%;
+		padding: 30px 20px;
+		margin-top: 60px;
+		position: relative;
+		height: 260px;
+		text-align: left;
+		@extend %shadow;  
+		@include transition(all, .2s);
+		&:hover {
+			@include transform(scale(1.1));
+			a {opacity: 1;}
+		}
+		&:before {
+			content: attr(data-order);
+			display: block;
+			@include position(absolute, 10px, auto, auto, 12px);
+			color: #A5A5A5;
+			font: 16px/1 $rcl;
+		}
+		&__imgWrap {
+			height: 50px;
+			margin: 0 0 15px;
+			position: relative;
+			overflow: visible;
+			text-align: center;
+			background: url('../images/reason_icons.png') no-repeat;
+			img {
+			}
+		}
+		p {
+			font: 16px $rcl;
+			color: $blueD;
+		}
+		&:nth-child(1) &__imgWrap{background-position: -5px -153px; width: 39px; height: 49px;}
+		&:nth-child(2) &__imgWrap{background-position: -5px -43px; width: 47px; height: 50px;}
+		&:nth-child(3) &__imgWrap{background-position: -5px 11px; width: 50px; height: 38}
+		&:nth-child(4) &__imgWrap{background-position: -5px -98px; width: 47px; height: 50px;}
+
+		@include mh800 {
+	         margin-top: 40px;
+	    }
+	    @include mh800 {
+	         margin-top: 20px;
+	    }
+	}
+}

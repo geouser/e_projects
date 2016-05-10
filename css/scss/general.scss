@@ -92,6 +92,9 @@ h4 {
 p {
     font: 18px $rcl;
     color: #282828;
+    strong {
+        font-family: $rcb;
+    }
 }
 strong {
     font-weight: normal;
