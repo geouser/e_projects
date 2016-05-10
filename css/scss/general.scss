@@ -11,6 +11,7 @@
 @import 'main';
 
 
+
 /*
 
 CSS clearfix----------  @extend %clearfix;
@@ -119,7 +120,7 @@ p {
     font-family: $rcl;  
 
     &:hover {
-        background-color: rgba(63, 162, 255, .2);
+        background-color: transparent;
         color: #3FA2FF
     }
 
