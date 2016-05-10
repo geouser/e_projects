@@ -267,3 +267,138 @@ nav ul {
 
 
 
+/*---------------------- 
+    SLICK STYLES
+------------------------*/
+.slick-dots li {
+    width: 12px;
+    height: 12px;
+    border: 1px solid $blue;
+    cursor: pointer;
+    margin: 0 10px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    &.slick-active {
+        background-color: $blue;
+    }
+    &:hover {
+        background-color: $blue;
+    }
+    button {
+        display: none;
+    }
+}
+.slick-arrow {
+    border: 1px solid $blue;
+    width: 65px; height: 65px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    margin-top: -30px;
+    &.slick-prev {
+        left: -110px;
+    }
+    &.slick-next {
+        right: -110px;
+    }
+}
+
+/*---------------------- 
+    FULLPAGE STYLES
+------------------------*/
+
+#fp-nav ul li a, .fp-slidesNav ul li a {
+    &.active span {
+        background-color: $blue!important;
+        border: 1px solid $blue!important;
+    }
+    span {
+         width: 12px!important;
+        height: 12px!important;
+        border: 1px solid #A5CFF8!important;
+        cursor: pointer!important;
+        -webkit-border-radius: 50%!important;
+                border-radius: 50%!important;
+    }
+}
+#fp-nav ul li a, .fp-slidesNav ul li  {
+    margin: 14px!important;
+}
+
+
+/*---------------------- 
+    TEXT BLOCK WITH SCROLLBAR STYLES
+------------------------*/
+.scrollBarText {
+    height: 430px;
+    position: relative;
+    margin-top: 50px;
+    padding: 40px;
+    @extend %shadow;    
+     .ps-scrollbar-y-rail {
+        background-color: #D1D0D1 !important;
+        right: 6px !important;
+        top: 6px !important;
+        bottom: 6px !important;
+        width: 4px !important;
+        opacity: 1 !important;
+        z-index: 2;
+        -webkit-border-radius: 0 !important;
+         border-radius: 0 !important;
+        .ps-scrollbar-y {
+            background-color: $blue !important;
+            width: 100% !important;
+            -webkit-border-radius: 0 !important;
+                    border-radius: 0 !important;
+        }
+    }
+}
+.whitePadding{
+    position: relative;
+    &:after {
+     content: "";
+     display: block;
+     height: 40px;
+     background-color: #FFF;
+     -webkit-border-radius: 5px;
+             border-radius: 5px;
+     @include position(absolute, auto, 0, 0, 0 );   
+    }
+}
+.textBlock {
+    background-color: #FFF;
+    text-align: left;
+    -webkit-column-count: 2; 
+    -moz-column-count: 2; 
+    column-count: 2;
+    padding-bottom: 60px;
+
+    -webkit-column-gap: 40px; 
+    -moz-column-gap: 40px; 
+    column-gap: 40px;
+    h3 {
+      font: 16px $rcb;  
+      color: $blueD;
+      margin-bottom: 20px;
+    }
+    h4 {
+        margin-bottom: 20px;
+    }
+    h5 {
+        font: 16px $rcb;  
+        color: $blue;
+        margin: 0 0 20px;
+    }
+    h6 {
+        font: 16px $rcb; 
+        color: $blueD;
+        margin: 0 0 24px;
+    }
+    p {
+        font: 16px $rcl; 
+        color: $blueD;
+        margin-bottom: 20px;
+        strong {
+            font-family: $rcb;  
+        } 
+    }
+}

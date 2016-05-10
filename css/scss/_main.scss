@@ -6,11 +6,9 @@
 		margin: 0 1%;
 		padding: 50px 0;
 		position: relative;
-		box-shadow: 0px 1px 3px 0px rgba( 0, 0, 0, .2 );
+		@extend %shadow;  
 		background-color: #FCFDFD;
 		@include transition(all, .2s);
-		-webkit-border-radius: 5px;
-		        border-radius: 5px;
 		&:hover {
 			@include transform(scale(1.1));
 			background-color: #FFF;
@@ -53,6 +51,48 @@
 }
 
 
+.trustUs {
+	display: inline-block;
+	vertical-align: top;
+	width: 540px;
+	text-align: left;
+	margin-right: 70px;
+	margin-top: 25px;
+	h2 {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	&__comp {
+		background-image: url("../images/comp_divide.png");
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		margin-bottom: 100px;
+		@extend %clearfix;	  
+		&__item {
+			height: 95px;
+			width: 164px;
+			text-align: center;	
+			float: left;
+			&:nth-child(3n + 2) {
+				width: 198px;
+			}
+			&:before {
+				height: 100%;
+				display: inline-block; vertical-align: middle;
+				content: "";
+			}
+			img {
+				max-width: 90%;
+				max-height: 90%;
+				display: inline-block; vertical-align: middle;
+			}
+		}
+	}
+	.slick-dots {
+		bottom: -60px;
+	}
+}
+
 
 .weRecommend {
 	width: 335px;
@@ -80,9 +120,7 @@
 		width: 100%;
 		padding: 23px 25px;
 		background-color: #FDFDFE;
-		box-shadow: 0px 1px 3px 0px rgba( 0, 0, 0, .2 );
-		-webkit-border-radius: 5px;
-		    border-radius: 5px;
+		@extend %shadow;  
 		margin-bottom: 15px;
 		text-align: left;
 		position: relative;
@@ -125,14 +163,50 @@
 }
 
 
-.trustUs {
-	display: inline-block;
-	vertical-align: top;
-	width: 540px;
-	text-align: left;
-	margin-right: 70px;
-	h2 {
-		text-align: left;
-		margin-bottom: 20px;
+
+
+.doneProjects {
+	margin-top: 30px;
+	&__item {
+		width: 320px; height: 380px;
+		@extend %shadow;  
+		border: 7px solid #fff;
+		position: relative;
+		margin: 20px 14px;
+		@include transition(all, .2s);
+		&:hover {
+			@include transform(scale(1.1));
+			background-color: #FFF;
+		}
+		img {
+			height: 100%;
+			max-width: 100%;
+		}
+		&__info {
+			background-color: #FFF;
+			position: absolute;
+			bottom: -100%;
+			padding: 12px;
+			text-align: center;
+			@include transition(all, .4s);
+			width: 100%;
+			span {
+				font: 16px $rcl;
+				color: $blueD;
+			}
+			p {
+				font: 20px $rcb;
+				margin: 12px 0 20px 0;
+				color: $blueD;
+			}
+			a {
+				color: $blue;
+				font: 16px/20px $rcli;
+			}
+		}
+		&:hover &__info {
+			bottom: 0;
+		}
 	}
 }
+
