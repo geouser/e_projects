@@ -11,8 +11,7 @@ window.params = {
 jQuery(document).ready(function($) {
 
 
-if ($(window).width() >= 1201) {
-$('body').append('<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.css">');
+
 if( $('.fullpage').length > 0) {
       $('.fullpage').fullpage({
           //Navigation
@@ -57,7 +56,7 @@ if( $('.fullpage').length > 0) {
           paddingTop: '0',
           paddingBottom: '0',
           //fixedElements: 'header, .footer',
-          responsiveWidth: 0,
+          responsiveWidth: 1200,
           responsiveHeight: 0,
 
           //Custom selectors
@@ -68,13 +67,7 @@ if( $('.fullpage').length > 0) {
           onLeave: function(index, nextIndex, direction){},
           afterLoad: function(anchorLink, index){},
           afterRender: function(){},
-          afterResize: function(){
-            if ($(window).width() <= 1200) {
-              $('link[href="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.css"]').attr('href', '');
-            } if ($(window).width() >= 1201) {
-              $('body').append('<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.fullpage/2.5.9/jquery.fullPage.min.css">');
-            }
-          },
+          afterResize: function(){},
           afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
           onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
       });
@@ -82,7 +75,10 @@ if( $('.fullpage').length > 0) {
         $.fn.fullpage.moveSectionDown();
       });
     }
-  }
+
+
+
+
 
 $('.scrollBar').perfectScrollbar({
   suppressScrollX: true
