@@ -322,6 +322,40 @@ nav ul {
 
 }
 
+/*---------------------- 
+    FOOTER STYLES
+------------------------*/
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 55px;
+    text-align: center;
+    @extend %vertAlign;
+
+    &:after {
+        content: '';
+        height: 1px;
+        width: 130px;
+        margin-left: -65px;
+        top: 0;
+        left: 50%;
+        position: absolute;
+        background-color: #C0C7CF;
+    }
+
+    p {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 95%;
+        text-align: center;
+        color: $blueD;
+        opacity: .5;
+        font-family: $rcl;
+        font-size: 16px;
+    }
+}
+
 
 /*---------------------- 
     SECTION STYLES
@@ -417,13 +451,13 @@ nav ul {
 ------------------------*/
 .scrollBarText {
     height: 430px;
-    padding: 40px;
+    border: 40px solid transparent;
     background-color: #FFF;
      .ps-scrollbar-y-rail {
         background-color: #D1D0D1 !important;
         right: 6px !important;
-        top: 6px !important;
-        bottom: 6px !important;
+        top: 40px !important;
+        bottom: 40px !important;
         width: 4px !important;
         opacity: 1 !important;
         z-index: 2;
@@ -441,13 +475,16 @@ nav ul {
     position: relative;
     background-color: #fff;
     margin-top: 50px;
-    @include mh800 {
-         margin-top: 20px;
-    }
+    margin-bottom: 15px;
     overflow: hidden;
     @extend %shadow;
     -webkit-border-radius: 5px;
              border-radius: 5px;
+
+    @include mh800 {
+         margin-top: 20px;
+    }
+    
     &:after {
      content: "";
      display: block;
