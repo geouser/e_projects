@@ -99,6 +99,69 @@ p {
 
 
 /*---------------------- 
+    BUTTON STYLES
+------------------------*/
+
+.button {
+    @include transition(all, .2s);
+    width: 340px;
+    padding: 17px 0 16px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 5px;
+    background-color: $blue;
+    border: 1px solid $blue;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: $rcl;  
+
+    &:hover {
+        background-color: rgba(63, 162, 255, .2);
+        color: #3FA2FF
+    }
+
+    &.empty {
+        border: 1px solid $blue;
+        color: $blue;
+
+        &:hover {
+            color: #fff;
+            background-color: $blue;
+        }
+    }
+}
+
+/* down_button */
+.down_button {
+    position: absolute;
+    display: block;
+    width: 340px;
+    text-align: center;
+    margin-left: -170px;
+    font-family: $rcli;
+    color: $blue;
+    font-size: 18px;
+    left: 50%;
+    bottom: 55px;
+
+    &:after {
+        @include position(absolute, auto, auto, -20px, 50%);
+        @include transform(rotate(-45deg));
+        content: '';
+        width: 7px;
+        height: 7px;
+        margin-left: -8px;
+        border-left: 1px solid $blue;
+        border-bottom: 1px solid $blue;
+    }
+}
+
+
+
+
+/*---------------------- 
     HEADER STYLES
 ------------------------*/
 header {
@@ -246,24 +309,6 @@ nav ul {
 
 
 
-/*---------------------- 
-    BUTTON STYLES
-------------------------*/
-
-.button {
-    height: 42px; 
-    padding: 0 17px; 
-    border: 1px solid #fff; 
-    background-color: transparent; 
-    color: #FFF; 
-    -webkit-border-radius: 10px;
-    border-radius: 6px; 
-    font: 18px 'helvetica';
-    cursor: pointer;
-    @include transition(all, .2s);
-    
-    &:hover {background-color: rgba(255,255,255, .2);}
-}
 
 
 
