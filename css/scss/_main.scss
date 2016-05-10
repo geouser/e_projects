@@ -54,6 +54,13 @@
 			opacity: 0;
 			@include transition(all, .2s);
 		}
+
+		@include mh800 {
+	         margin-top: 40px;
+	    }
+	    @include mh800 {
+	         margin-top: 20px;
+	    }
 	}
 }
 
@@ -177,6 +184,9 @@
 
 .doneProjects {
 	margin-top: 30px;
+	@include mh800 {
+         margin-top: 10px;
+    }
 	&__item {
 		width: 320px; height: 380px;
 		@extend %shadow;  
