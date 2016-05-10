@@ -99,6 +99,43 @@ p {
 
 
 /*---------------------- 
+    BUTTON STYLES
+------------------------*/
+
+.button {
+    @include transition(all, .2s);
+    width: 340px;
+    padding: 17px 0 16px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 5px;
+    background-color: $blue;
+    border: 1px solid $blue;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: $rcl;  
+
+    &:hover {
+        background-color: rgba(63, 162, 255, .2);
+        color: #3FA2FF
+    }
+
+    &.empty {
+        border: 1px solid $blue;
+        color: $blue;
+
+        &:hover {
+            color: #fff;
+            background-color: $blue;
+        }
+    }
+}
+
+
+
+/*---------------------- 
     HEADER STYLES
 ------------------------*/
 header {
