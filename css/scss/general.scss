@@ -8,8 +8,6 @@
 @import 'mixins';
 
 
-@import 'main';
-
 
 
 /*
@@ -478,3 +476,6 @@ nav ul {
         } 
     }
 }
+
+@import 'main';
+@import 'benefits';

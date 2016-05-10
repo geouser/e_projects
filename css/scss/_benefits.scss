@@ -1,0 +1,83 @@
+.benefits-page {
+	background-image: url(../images/benefits-page.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+
+	.offer {
+		background-image: url(../images/question_signs.png);
+		background-size: 988px;
+		background-repeat: no-repeat;
+		background-position: 50% 100px;
+	}
+}
+
+.you_get {
+	display: block;
+	text-align: center;
+	margin-top: 45px;
+
+	&__feature {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 20px 0 70px;
+		margin: 10px;
+		width: 305px;
+		height: 65px;
+		border-radius: 5px;
+		background-color: #F9FAFB;
+		color: $blueD;
+		overflow: hidden;
+		text-align: left;
+		@extend %shadow;
+		@extend %vertAlign;
+
+		&:after {
+			content: '';
+			display: block;
+			width: 61px;
+			height: 100%;
+			position: absolute;
+			left: 0px;
+			top: 0;
+			bottom: 0;
+			border-right: 1px solid #E3E7E9;
+			background-image: url(../images/you_get_icons.png);
+		}
+		&.lamp:after {
+			background-position: -0px -65px;
+		}
+		&.rocket:after {
+			background-position: -0px -195px;
+		}
+		&.graph:after {
+			background-position: -60px -0px;
+		}
+		&.shield:after {
+			background-position: -60px -195px;
+		}
+		&.recycle:after {
+			background-position: -0px -130px;
+		}
+		&.arrow:after {
+			background-position: -0px -0px;
+		}
+		&.money:after {
+			background-position: -60px -65px;
+		}
+		&.rising:after {
+			background-position: -60px -130px;
+		}
+
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			width: 95%;
+			font-family: $rcb;
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
+}
