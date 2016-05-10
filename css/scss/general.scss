@@ -89,6 +89,9 @@ p {
     font: 18px $rcl;
     color: #282828;
 }
+strong {
+    font-weight: normal;
+}
 .subtitle {
     max-width: 680px;
     display: block;
@@ -376,9 +379,9 @@ nav ul {
 ------------------------*/
 .scrollBarText {
     height: 430px;
-    position: relative;
     margin-top: 50px;
     padding: 40px;
+
     @extend %shadow;    
      .ps-scrollbar-y-rail {
         background-color: #D1D0D1 !important;
@@ -399,6 +402,8 @@ nav ul {
     }
 }
 .whitePadding{
+    position: relative;
+    background-color: #fff;
     position: relative;
     &:after {
      content: "";
