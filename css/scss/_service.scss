@@ -33,10 +33,16 @@
 .seoText {
 	background-color: #FFF;
 	height: 620px;
-	padding: 25px 30px;
+	border-top: 25px solid transparent;
+	border-bottom: 25px solid transparent;
+	padding: 0 30px;
 	text-align: left;
-	position: relative;
 	@extend %shadow;
+
+	.ps-scrollbar-y-rail {
+		top: 25px!important;
+		bottom: 25px!important;
+	}
 	> span {
 		font: 18px $rcl;
 		text-transform: uppercase;
