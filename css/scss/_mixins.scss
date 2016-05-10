@@ -271,3 +271,21 @@
     @content;
   }
 }
+
+@mixin mh850 {
+  @media (max-height: 850px) {
+    @content;
+  }
+}
+
+@mixin mh800 {
+  @media (max-height: 800px) {
+    @content;
+  }
+}
+
+@mixin mh700 {
+  @media (max-height: 700px) {
+    @content;
+  }
+}

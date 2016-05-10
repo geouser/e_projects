@@ -76,6 +76,12 @@ h2 {
     text-transform: uppercase;
     max-width: 680px;
     color: $blueD;
+    @include mh850 {
+         font: 50px/55px $rcb;
+    }
+    @include mh800 {
+         font: 46px/50px $rcb;
+    }
 }
 h3 {
     font: 22px $rcb;
@@ -98,6 +104,14 @@ strong {
     margin: 12px auto 15px;
     color: $blueD;
     font: 20px/28px $rcl;
+    @include mh850 {
+         font: 18px/26px $rcl;
+         margin: 8px auto 10px;
+    }
+    @include mh800 {
+         font: 18px/24px $rcl;
+         margin: 5px auto 7px;
+    }
 }
 
 
@@ -426,6 +440,9 @@ nav ul {
     position: relative;
     background-color: #fff;
     margin-top: 50px;
+    @include mh800 {
+         margin-top: 20px;
+    }
     overflow: hidden;
     @extend %shadow;
     -webkit-border-radius: 5px;
