@@ -133,6 +133,32 @@ p {
     }
 }
 
+/* down_button */
+.down_button {
+    position: absolute;
+    display: block;
+    width: 340px;
+    text-align: center;
+    margin-left: -170px;
+    font-family: $rcli;
+    color: $blue;
+    font-size: 18px;
+    left: 50%;
+    bottom: 55px;
+
+    &:after {
+        @include position(absolute, auto, auto, -20px, 50%);
+        @include transform(rotate(-45deg));
+        content: '';
+        width: 7px;
+        height: 7px;
+        margin-left: -8px;
+        border-left: 1px solid $blue;
+        border-bottom: 1px solid $blue;
+    }
+}
+
+
 
 
 /*---------------------- 
@@ -280,27 +306,6 @@ nav ul {
 /*---------------------- 
     SECTION STYLES
 ------------------------*/
-
-
-
-/*---------------------- 
-    BUTTON STYLES
-------------------------*/
-
-.button {
-    height: 42px; 
-    padding: 0 17px; 
-    border: 1px solid #fff; 
-    background-color: transparent; 
-    color: #FFF; 
-    -webkit-border-radius: 10px;
-    border-radius: 6px; 
-    font: 18px 'helvetica';
-    cursor: pointer;
-    @include transition(all, .2s);
-    
-    &:hover {background-color: rgba(255,255,255, .2);}
-}
 
 
 

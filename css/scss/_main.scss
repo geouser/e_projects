@@ -1,4 +1,10 @@
-
+.main-page {
+	background-image: url(../images/main-page.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
 .weDo {
 	@include flex();
 	&__item {
