@@ -71,7 +71,7 @@ if( $('.fullpage').length > 0) {
           afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
           onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
       });
-      $(document).on('click', '.scroll_down', function(){
+      $(document).on('click', '.down_button', function(){
         $.fn.fullpage.moveSectionDown();
       });
     }
