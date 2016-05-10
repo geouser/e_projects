@@ -144,7 +144,7 @@ h4 a {
     border-bottom: 1px solid $blue;
 }
 ul.list,
-.single ul {
+.single ul:not(.breadcrumbs) {
     list-style-type: none;
     li {
         margin-bottom: 10px;
@@ -314,6 +314,7 @@ nav ul {
     list-style-type: none;
     margin: 0;
     height: 100%;
+    li:before {display: none !important;}
 
     a {
         font: 18px $rcl;
@@ -640,8 +641,16 @@ section {
     }
 }
 
-.single .wrapper {
+.single {
+    padding-top: 80px;
+    padding-bottom: 200px;
+    position: relative;
+    .wrapper {
     width: 1080px;
+    }
+    section {
+        margin-top: 80px;
+    }
 }
 main {
     width: 64%;
@@ -656,6 +665,38 @@ aside {
     display: inline-block;
     vertical-align: top;
     margin-left: 3%;
+}
+.breadcrumbs {
+    text-align: left;
+    li {
+        display: inline-block;
+        a {
+        font: 14px $rt;
+        color: $blue;
+        text-decoration: underline;
+        }
+        &:after {
+            display: inline-block;
+            vertical-align: middle;
+            content: "";
+            margin: 0 12px;
+            width: 3px;
+            height: 5px;
+            background-image: url("../images/breadcrumb_sign.png");
+            background-size: 100% 100%;
+        }
+        &:last-of-type:after {display: none; }
+        &:first-of-type:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: "";
+            margin: 0 6px 0 0;
+            width: 9px;
+            height: 8px;
+            background-image: url("../images/home.png");
+            background-size: 100% 100%;
+        }
+    }
 }
 
 @import 'main';

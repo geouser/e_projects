@@ -15,9 +15,6 @@ $ri:             'robotoitalic';
 $rt_i:           'robotothin_italic';
 $rslab_b:        'roboto_slabbold';
 
-html, body                    	{   height: 100%; font-family: $rcr;}
-.white                          {	color: #FFF;}
-
 
 $rcl:        'roboto_condensedlight';
 $rcli:       'roboto_condensedlight_italic';
@@ -26,7 +23,6 @@ $rcr:        'roboto_condensedregular';
 
 
 html, body {
-	height: 100%;
 	font-family: $rcr;
 }
 p {
