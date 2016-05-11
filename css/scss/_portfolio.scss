@@ -40,6 +40,36 @@
 		&__item {
 			display: inline-block;
 			vertical-align: top;
+
+			a {
+				vertical-align: middle;
+
+				&:before {
+					content: '';
+					display: inline-block;
+					width: 14px;
+					height: 14px;
+					margin-right: 8px;
+					background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3QTY1OUE4RDE3NzExMUU2ODU2OEVGQzRDNzdDRjA3NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3QTY1OUE4RTE3NzExMUU2ODU2OEVGQzRDNzdDRjA3NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjdBNjU5QThCMTc3MTExRTY4NTY4RUZDNEM3N0NGMDc1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjdBNjU5QThDMTc3MTExRTY4NTY4RUZDNEM3N0NGMDc1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Cs1okwAAARBJREFUeNqMkq1uAkEUhWcIogkOg61AVdYgwUD6AIBrtmt4gSY1VIFYzQsQflJUVatwGKrbIkhIXwEMCQgalu8mt+l0GVJO8uVuZvfMvXNmbRzHRlQaGkspQAUu4A3Gk1uzMx6l1JShfMIUriEHT7DiXd5ntMVBbNW0ghs6bHUz2bQND5BlfZ3sKONduSYRz3tKE2Zw7xtVzvTqmhyzKIKGzyhBLM1pbSDjM0p6VT3TH7EmCuDZZxxrbeuHrqkMNWgdpSr3qJHPNYhIxwvUtIA6fOiZf++RhS+JHF6gAyOQ+C/V9A6hO5H9+XNOST8OoQt30JfO/xoTIfW0DlLmDOnZ+mp6hPRZHROd02z0fRBgAE7nVRHGh766AAAAAElFTkSuQmCC);
+					background-size: 100%;
+					background-repeat: no-repeat;
+					background-position: 50% 50%;
+				}
+			}
+
+			.doneProjects__item__info:before {
+				content: '';
+				width: 67px;
+				height: 67px;
+				margin-left: -33px;
+				top: -55px;
+				position: absolute;
+				left: 50%;
+				background-image: url(../images/zoom-big-shadow.png);
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+			}
 		}
-	}
+	} 
 }

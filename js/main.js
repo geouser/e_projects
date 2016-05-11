@@ -32,7 +32,8 @@ var filtering = (function( $ ) {
 
     // instantiate the plugin
     $grid.shuffle({
-      itemSelector: '.shuffle__container__item'
+      itemSelector: '.shuffle__container__item',
+      useTransforms: false
     });
   },
 
