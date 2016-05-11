@@ -192,10 +192,14 @@
 		border: 7px solid #fff;
 		position: relative;
 		margin: 20px 14px;
+		overflow: hidden;
 		@include transition(all, .2s);
 		&:hover {
 			@include transform(scale(1.1));
 			background-color: #FFF;
+		}
+		&.no-overflow {
+			overflow: visible;
 		}
 		img {
 			height: 100%;
