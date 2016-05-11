@@ -17,7 +17,7 @@
 		background-color: #FCFDFD;
 		@include transition(all, .2s);
 		&:hover {
-			@include transform(scale(1.1));
+			@include transform(scale(1.04));
 			background-color: #FFF;
 			a {opacity: 1;}
 		}
@@ -139,7 +139,7 @@
 		position: relative;
 		@include transition(all, .2s);
 		&:hover {
-			@include transform(scale(1.1));
+			@include transform(scale(1.04));
 			background-color: #FFF;
 		}
 		&:hover h4      {text-decoration: none;}
