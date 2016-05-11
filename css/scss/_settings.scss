@@ -25,6 +25,14 @@ $rcr:        'roboto_condensedregular';
 html, body {
 	font-family: $rcr;
 }
+body {
+	padding-top: 80px;
+	position: relative;
+}
+.fp-enabled body {
+	padding-top: 0;
+	position: static;
+}
 p {
 
 }
