@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="css/general.css">
 
     </head>
-    <body class="portfolio-page">
+    <body class="portfolio-page single">
 
         <header><!-- start header -->
             <a href="" class="logo">
@@ -55,17 +55,69 @@
             <div class="wrapper">
                 <h2>Портфолио</h2>
                 <p class="subtitle">Меньше слов - больше реальных примеров!</p>
+
+                <div class="shuffle" id="shuffle">
+                    <div class="shuffle__controls">
+                        <button class="shuffle__controls__button" data-group="corporative">Корпоративные сайты</button>
+                        <button class="shuffle__controls__button" data-group="landing-page">Лендинг-пейдж</button>
+                        <button class="shuffle__controls__button" data-group="shop">Интернет-магазины</button>
+                        <button class="shuffle__controls__button" data-group="ui">Интерфейсы</button>
+                    </div>
+                    <div class="shuffle__container" id="shuffle__container">
+                        <div class="shuffle__container__item doneProjects__item" data-groups='["corporative"]'>
+                           <img src="images/done_3.png" alt="">
+                            <div class="doneProjects__item__info">
+                                <span>Engel & Walkers</span>
+                                <p>Разработка конверсионного лендинга для элитной недвижимости Hovard Palace</p>
+                                <a href="">Посмотреть полный макет...</a>
+                            </div>
+                        </div>
+                        <div class="shuffle__container__item doneProjects__item" data-groups='["corporative", "landing-page"]'>
+                           <img src="images/done_3.png" alt="">
+                            <div class="doneProjects__item__info">
+                                <span>Engel & Walkers</span>
+                                <p>Разработка конверсионного лендинга для элитной недвижимости Hovard Palace</p>
+                                <a href="">Посмотреть полный макет...</a>
+                            </div>
+                        </div>
+                        <div class="shuffle__container__item doneProjects__item" data-groups='["ui"]'>
+                           <img src="images/done_3.png" alt="">
+                            <div class="doneProjects__item__info">
+                                <span>Engel & Walkers</span>
+                                <p>Разработка конверсионного лендинга для элитной недвижимости Hovard Palace</p>
+                                <a href="">Посмотреть полный макет...</a>
+                            </div>
+                        </div>
+                        <div class="shuffle__container__item doneProjects__item" data-groups='["shop"]'>
+                           <img src="images/done_3.png" alt="">
+                            <div class="doneProjects__item__info">
+                                <span>Engel & Walkers</span>
+                                <p>Разработка конверсионного лендинга для элитной недвижимости Hovard Palace</p>
+                                <a href="">Посмотреть полный макет...</a>
+                            </div>
+                        </div>
+
+                        <div class="my-sizer-element"></div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <footer>
+            <p>Copyright © E-Projects. Разработка элитных веб-проектов</p>
+        </footer>
 
 
   	    <!-- //////////////////////////////////////////////////////////////////////// -->
 
         <div id="modal-popup" class="mfp-hide zoom-anim-dialog"></div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/fullpage-2.7.9.min.js"></script>
         <link rel="stylesheet" href="css/fullpage-2.7.9.css">
+        <script src="js/modernizr.js"></script>
+        <script src="js/shuffle-3.1.1.min.js"></script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.8/js/min/perfect-scrollbar.jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.11/css/perfect-scrollbar.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>

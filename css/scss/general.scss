@@ -419,6 +419,7 @@ footer {
         opacity: .5;
         font-family: $rcl;
         font-size: 16px;
+        margin-bottom: 0;
     }
 }
 
@@ -702,3 +703,4 @@ aside {
 @import 'main';
 @import 'benefits';
 @import 'service';
+@import 'portfolio';
