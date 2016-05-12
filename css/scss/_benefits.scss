@@ -80,6 +80,9 @@
 		height: 260px;
 		text-align: left;
 		background-color: #FFF;
+		@include mh700 {
+			height: 240px;
+		}
 		@extend %shadow;  
 		@include transition(all, .2s);
 		&:hover {
@@ -106,6 +109,9 @@
 		p {
 			font: 16px $rcl;
 			color: $blueD;
+			@include mh700 {
+				font: 15px $rcl;
+			}
 		}
 		&:nth-child(1) &__imgWrap{background-position: -5px -153px; width: 39px; height: 49px;}
 		&:nth-child(2) &__imgWrap{background-position: -5px -43px; width: 47px; height: 50px;}

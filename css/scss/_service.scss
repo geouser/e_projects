@@ -2,6 +2,9 @@
 	.offer {
 		.subtitle {
 			margin: 16px auto 38px;
+			@include mh800 {
+		         margin: 10px auto 15px;
+		    }
 		}
 	}
 }
@@ -9,6 +12,9 @@
 .designInfo {
 	@include flex($alignI: start, $justify: space-between);
 	margin-top: 50px;
+	@include mh750 {
+	    margin-top: 20px;
+	}
 	&__item {
 		width: 30%;
 		text-align: left;
@@ -17,6 +23,9 @@
 			@extend .you_get__feature;	
 			width: 100%;
 			margin: 0 0 20px 0;
+			@include mh750 {
+			    margin: 0 0 10px 0;
+			}
 		}
 		h3 {
 			font: 16px $rcb;
@@ -24,15 +33,24 @@
 			text-transform: uppercase;
 			text-align: left;
 			margin-bottom: 25px;
+			@include mh750 {
+			    margin-bottom: 15px;
+			}
 		}
 		p {
 			font: 16px $rcl;
 			color: $blueD;
+			@include mh750 {
+			    font: 15px $rcl;
+			}
 		}
 		ul li {
 			font: 16px/24px $rcl;
 			&:before {
 				top: 6px;
+			}
+			@include mh750 {
+			    font: 15px/22px $rcl;
 			}
 		}
 	}
@@ -46,6 +64,15 @@
 	padding: 0 30px;
 	text-align: left;
 	@extend %shadow;
+	@include mh800 {
+	   height: 550px;
+	}
+	@include mh750 {
+	   height: 500px;
+	}
+	@include mh700 {
+	  height: 450px;
+	}
 
 	.ps-scrollbar-y-rail {
 		top: 25px!important;
@@ -57,11 +84,18 @@
 		color: $blue;
 		display: block;
 		margin-bottom: 25px;
+		@include mh700 {
+		  margin-bottom: 15px;
+		}
 	}
 	h3 {
 		font: 18px/22px $rcb;
 		margin-bottom: 20px;
 		color: $blueD;
+		@include mh700 {
+		  margin-bottom: 10px;
+		  font: 16px/20px $rcb;
+		}
 		&:first-of-type:after {
 			content: "";
 			display: block;
@@ -72,11 +106,17 @@
 	p {
 		font: 16px/20px $rcl;
 		color: #768494;
+		@include mh700 {
+		 	font: 14px/18px $rcl;
+		}
 		&:after {
 			content: "";
 			display: block;
 			border-top: 1px solid #E0E3E7;
 			margin: 20px 0;
+			@include mh700 {
+			  margin: 10px 0;
+			}
 		}
 		&:last-of-type:after {
 			display: none;
@@ -87,11 +127,21 @@
 .seoPromotion {
 	ul {
 		margin-top: 80px;
+		@include mh800 {
+		   margin-top: 40px;
+		}
+		@include mh700 {
+		   margin-top: 20px;
+		}
 		li {
 			color: $blueD;
 			font: 22px $rcb;
 			padding-left: 60px;
 			margin-bottom: 27px;
+			@include mh700 {
+			   margin-bottom: 20px;
+			   font: 20px $rcb;
+			}
 			&:before {
 				width: 47px;
 				height: 47px;
