@@ -7,12 +7,18 @@
 		@include mh750 {
 			margin: 5px auto 10px;
 		}
+		 @include m800 {
+	         margin: 15px auto 18px;
+	    }
 	}
 }
 .weDo {
 	@include flex();
 	@include mh700 {
 		@include flex($justify : center);
+	}
+	@include m800 {
+		@include flex($justify : space-around, $wrap: wrap);
 	}
 	&__item {
 		width: 23%;
@@ -34,6 +40,22 @@
 			@include position(absolute, 14px, auto, auto, 14px);
 			color: #A5A5A5;
 			font: 16px $rcl;
+		}
+		@include mh800 {
+			padding: 40px 0;
+	        margin-top: 40px;
+	    }
+		@include mh700 {
+			width: 20%;
+			padding: 35px 0;
+		}
+		@include m800 {
+			width: 250px;
+			margin-top: 40px;
+			padding: 45px 0;
+		}
+		@include m600 {
+			margin-top: 20px;
 		}
 		&__imgWrap {
 			height: 100px;
@@ -64,6 +86,9 @@
 			@include mh700 {
 				font: 18px/18px $rcb;
 		    }
+		    @include m800 {
+				font: 20px/20px $rcb;
+		    }
 		}
 		a {
 			@include position(absolute, auto, 0, 15px, 0);
@@ -76,14 +101,6 @@
 				font: 14px/14px $rcli;
 				bottom: 10px;
 		    }
-		}
-		@include mh800 {
-			padding: 40px 0;
-	        margin-top: 40px;
-	    }
-		@include mh700 {
-			width: 20%;
-			padding: 35px 0;
 		}
 	}
 }
@@ -109,12 +126,16 @@
 	    @include mh660 {
 	        font-size: 40px;
 	    }
+	    @include m600 {
+	       font: 32px/36px $rcb;
+	    }
 	}
 	&__comp {
 		background-image: url("../images/comp_divide.png");
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
-		margin-bottom: 70px;
+		margin:0 auto 70px;
+		width: 550px;
 		@extend %clearfix;	  
 		&__item {
 			height: 95px;
@@ -138,6 +159,14 @@
 		@include mh750 {
 	        margin-bottom: 40px;
 	    }
+	    @include m600 {
+	       width: 100%;
+	       background: none;
+	       &__item,
+	       &__item:nth-child(3n + 2) {
+	       	width: 50%;
+	       }
+	    }
 	}
 	.slick-dots {
 		bottom: -60px;
@@ -158,6 +187,7 @@
 		margin-bottom: 20px; 
 		color: $blueD; 
 		text-align: left;
+		width: 100%;
 		@include mh800 {
 	        margin-bottom: 10px;
 	    }
@@ -198,6 +228,9 @@
 	    }
 	    @include mh660 {
 	        padding: 6px 15px;
+	    }
+	    @include m1200 {
+	        padding: 25px 20px;
 	    }
 		h4 {
 			font: 18px/22px $rcb;
@@ -247,6 +280,27 @@
 		@include mh850 {
 	        margin-top: 10px;
 	    }
+	}
+	@include m1000 { 
+		width: 100%;
+		@include flex($wrap: wrap, $alignI : start, $justify: start);
+		display: -webkit-box !important;
+	    display: -moz-box !important;
+	    display: -ms-flexbox !important;
+	    display: -webkit-flex  !important;
+	    display: flex !important;
+		&__item {
+			width: 45%;
+			margin: 10px auto;
+		}
+		h3 {
+			text-align: center;
+		}
+	}
+	@include m600 {
+		&__item {
+			width: 100%;
+			} 
 	}
 }
 

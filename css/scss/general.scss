@@ -94,6 +94,10 @@ h2 {
          font: 38px/42px $rcb;
          max-width: 580px;
     }
+    @include m600 {
+         font: 32px/36px $rcb;
+         max-width: 100%;
+    }
 }
 h3 {
     font: 22px $rcb;
@@ -126,6 +130,9 @@ p {
     strong {
         font-family: $rcb;
     }
+    @include m360 {
+        font-size: 16px;
+    }
 }
 article p {
     margin-bottom: 22px;
@@ -148,6 +155,12 @@ strong {
     }
     @include mh700 {
          font: 16px/22px $rcl;
+    }
+    @include m800 {
+         margin: 12px auto 15px;
+    }
+    @include m600 {
+         font: 16px/18px $rcl;
     }
 }
 p a,
@@ -238,6 +251,11 @@ blockquote {
         padding: 15px 0 14px;
         font-size: 20px;
     }
+    @include m600 {
+        width: 300px;
+        padding: 14px 0 13px;
+        font-size: 20px;
+    }
 }
 
 /* down_button */
@@ -272,6 +290,9 @@ blockquote {
     @include mh700 {
        bottom: 20px;
     }
+    @include m1200 {
+       bottom: 20px;
+    }
 }
 
 
@@ -300,15 +321,19 @@ header {
 
     @include m800 {
         @include position(fixed, 0, auto, auto, -100%);
+        @include flex($alignI: center, $justify: space-between, $direction: column, $wrap: nowrap  );
         width: 260px !important;
         height: 100%;
         text-align: center;
-        background-color: #191919;
+        background-color: #fff;;
         margin-top: 0;
         padding: 20px 0;
         z-index: 100;
         
         &.active {left: 0;}
+        .wrapper {
+            height: auto;
+        }
 
     }
     .phone {
@@ -317,6 +342,9 @@ header {
         height: 30px;
         display: inline-block;
         font: 22px $rcb;
+        @include m800 {
+            position: static;
+        }
         }
 }
 
@@ -341,11 +369,14 @@ header {
                     border-radius: 50%;
         }
     }
+    @include m800 {
+        position: static;
+    }
 }
 
 
 /*-------- nav ---------*/
-nav  {height: 100%;}
+nav    {  height: 100%;}
 nav ul {
     @include flex($alignI: center, $justify: center);
     list-style-type: none;
@@ -372,14 +403,17 @@ nav ul {
 
     @include m800 { 
         display: block;
-        height: 100%;
+        height: auto;
         overflow: scroll;
         position: relative;
         
-        li a                    {   
+        li {
+            a {   
             margin: 0 0 25px 0;
-            &.active {color: #ECCC1D;}
-            &:hover  {background: transparent;}
+            }
+            &:last-of-type a{
+                margin-bottom: 0;
+            }
         } 
     }
 }
@@ -394,7 +428,7 @@ nav ul {
     margin: auto; 
     cursor: pointer;
     z-index: 100;
-    background-color: salmon;
+    background-color: $blueD;
     border: none;
     -webkit-border-radius: 4px;
             border-radius: 4px;
@@ -421,6 +455,9 @@ nav ul {
 
     @include m800 {
         display: block;
+    }
+    @include m320 {
+        right: 5px;
     }
 
 }
@@ -600,6 +637,17 @@ section {
         @include mh660 {
             margin-bottom: 10px;
         }
+         @include m600 {
+             font: 32px/36px $rcb;
+             max-width: 100%;
+        }
+    }
+     @include m1000 {
+        > div:first-of-type,
+        > div:nth-of-type(2){
+            margin: 0 auto 40px;
+            width: 100%;
+        }
     }
 }
 
@@ -689,33 +737,19 @@ section {
             font-family: $rcb;  
         } 
     }
+    @include m800 {
+        -webkit-column-gap: 20px; 
+        -moz-column-gap: 20px; 
+        column-gap: 20px;
+    }
+    @include m600 {
+       -webkit-column-count: 1; 
+        -moz-column-count: 1; 
+        column-count: 1;
+    }
 }
 
-.single {
-    padding-top: 80px;
-    padding-bottom: 200px;
-    position: relative;
-    .wrapper {
-    width: 1080px;
-    }
-    section {
-        margin-top: 80px;
-    }
-}
-main {
-    width: 64%;
-    display: inline-block;
-    vertical-align: top;
-}
-article {
-    text-align: left;
-}
-aside {
-    width: 32%;
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 3%;
-}
+
 .breadcrumbs {
     text-align: left;
     li {
@@ -758,7 +792,9 @@ aside {
     background-size: 100% 100%;
     cursor: pointer;
 }
-
+.buttonWrap {
+    width: 100%;
+}
 
 /*---------------------- 
     BACKGROUNDS
@@ -781,6 +817,9 @@ aside {
 }
 .service-page section:nth-of-type(2) {
     background-attachment: scroll;
+    @include m1200 {
+        background: transparent;
+    }
 }
 
 .questionBg {
@@ -807,9 +846,18 @@ aside {
 
 
 @media (max-width: 1200px) {
-   .fullpage {padding-top: 100px;}
+   .fullpage {padding-top: 100px; }
+   .fp-tableCell,
+   .fp-section {height: auto !important;}
+   .fp-section {padding: 0 0 80px 0 !important; margin-bottom: 60px !important;}
  }
+@include m600 {
+    .fullpage {padding-top: 70px; }
+}
 
+.mix[style*="display: inline-block"]:nth-of-type(3) {
+    background: red;
+}
 
 
 @import 'main';

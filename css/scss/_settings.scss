@@ -34,6 +34,9 @@ body {
     @include mh660 {
         padding: 50px 0;
     }
+    @include m1200 {
+        padding: 70px 0;
+    }
 }
 .fp-enabled body {
 	padding: 0;
