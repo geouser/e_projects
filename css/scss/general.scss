@@ -144,7 +144,8 @@ h4 a {
     border-bottom: 1px solid $blue;
 }
 ul.list,
-.single ul:not(.breadcrumbs) {
+.single ul:not(.breadcrumbs),
+.single ul:not(nav ul) {
     list-style-type: none;
     li {
         margin-bottom: 10px;
