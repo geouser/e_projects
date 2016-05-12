@@ -29,6 +29,20 @@ $(function(){
     }
   });
 
+  $('#shuffle__container').on('mixEnd', function(e, state){
+    $('.scrollBar').perfectScrollbar('update');
+    var elementsAll = state.$targets;
+    elementsAll.each(function(index, el) {
+      $(this).removeClass('current-left')
+    });
+    var $elementsShow = state.$show;
+    $elementsShow.each(function(index, el) {
+      if ((index+1) % 3 === 0){
+        $(this).addClass('current-left');
+      }
+    });
+  });
+
 });
 
 
