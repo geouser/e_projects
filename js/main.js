@@ -142,9 +142,9 @@ $(document).ready(function() {
 
 
 
-/*$('.scrollBar').perfectScrollbar({
+$('.scrollBar').perfectScrollbar({
   suppressScrollX: true
-});*/
+});
 
 
 
@@ -167,7 +167,7 @@ $('.menu-button').on('click', function(event) {
                               Sliders
 ---------------------------*/
 
-/*$('.trustUs__comp').slick({
+$('.trustUs__comp').slick({
   arrows: false,
   dots: true,
   fade: true
@@ -179,7 +179,7 @@ $('.doneProjects').slick({
   slidesToShow: 3,
   slidesToScroll: 3
 });
-*/
+
 });
 
 

@@ -237,7 +237,7 @@ blockquote {
         content: '';
         width: 7px;
         height: 7px;
-        margin-left: -8px;
+        margin-left: -4px;
         border-left: 1px solid $blue;
         border-bottom: 1px solid $blue;
     }
@@ -457,7 +457,10 @@ section {
     }
 }
 .slick-arrow {
+    @include transition(all, 0.2s);
     width: 65px; height: 65px;
+    border: 1px solid $blue;
+    border-radius: 50%;
     background-size: 100% 100%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -465,26 +468,30 @@ section {
             border-radius: 50%;
     margin-top: -30px;
     &:before {
-        display: none;   
+        content: '';
+        width: 13px;
+        height: 13px;
+        border-bottom: 1px solid $blue;
+        border-left: 1px solid $blue;
+        margin-top: -7px;
+        margin-left: -5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
      }
     &.slick-prev {
         left: -110px;
-        background-image: url("../images/prev.png");
-        &:hover {
-           background-image: url("../images/prev.png");
-           background-size: 100% 100%;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
+        
+        &:before {
+            @include transform(rotate(45deg));
         }
     }
     &.slick-next {
         right: -110px;
-        background-image: url("../images/next.png");
-        &:hover {
-           background-image: url("../images/next.png");
-           background-size: 100% 100%;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
+
+        &:before {
+            @include transform(rotate(-135deg));
+            margin-left: -10px;
         }
     }
     &:hover {
