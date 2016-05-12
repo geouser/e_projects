@@ -36,10 +36,11 @@
 	}
 
 	&__container {
-		text-align: justify;
+		@include flex($alignI: flex-start, $justify: flex-start,  $direction: row, $wrap: wrap);
+		.mix {
+			display: none;
+		}
 		&__item {
-			display: inline-block;
-			vertical-align: top;
 
 			a {
 				vertical-align: middle;
