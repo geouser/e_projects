@@ -16,58 +16,20 @@ jQuery(document).ready(function($) {
                               Shuffle
 ---------------------------*/
 
-var filtering = (function( $ ) {
-  'use strict';
+$(function(){
 
-  var $grid = $('.shuffle__container'),
-    $filterOptions = $('.shuffle__controls__button'),
+  // Instantiate MixItUp:
 
-  init = function() {
+  $('#shuffle__container').mixItUp({
+    animation: {
+      enable: true,
+      perspectiveDistance: '1000px',
+      animateResizeTargets: !0,
+      effects: 'fade scale'
+    }
+  });
 
-
-    // None of these need to be executed synchronously
-    setTimeout(function() {
-      setupFilters();
-    }, 100);
-
-    // instantiate the plugin
-    $grid.shuffle({
-      itemSelector: '.shuffle__container__item',
-      useTransforms: false
-    });
-  },
-
-  // Set up button clicks
-  setupFilters = function() {
-    var $btns = $filterOptions;
-    $btns.on('click', function() {
-      var $this = $(this),
-        isActive = $this.hasClass( 'active' ),
-        group = isActive ? 'all' : $this.data('group');
-
-      // Hide current label, show current label in title
-      if ( !isActive ) {
-        $('.shuffle__controls__button.active').removeClass('active');
-      }
-
-      $this.toggleClass('active');
-
-      // Filter elements
-      $grid.shuffle( 'shuffle', group );
-    });
-
-    $btns = null;
-  };
-
-  return {
-    init: init
-  };
-}( jQuery ));
-$(document).ready(function() {
-  filtering.init();
 });
-
-
 
 
 
