@@ -11,6 +11,9 @@
 }
 .weDo {
 	@include flex();
+	@include mh700 {
+		@include flex($justify : center);
+	}
 	&__item {
 		width: 23%;
 		margin: 0 1%;
@@ -20,6 +23,9 @@
 		@extend %shadow;  
 		background-color: #FCFDFD;
 		@include transition(all, .2s);
+		@include mh700 {
+			width: 20%;
+		}
 		&:hover {
 			@include transform(scale(1.04));
 			background-color: #FFF;
@@ -43,9 +49,18 @@
 				@include position(absolute, 0, 0, auto, 0);
 				margin: auto;
 			}
+			@include mh700 {
+		        height: 75px;
+		    }
 		}
 		&:nth-child(2) &__imgWrap img {left: 10px}
 		&:nth-child(4) &__imgWrap img {left: 18px}
+		@include mh700 {
+	         &:nth-child(1) &__imgWrap img {width: 160px; left: 7px;}
+			 &:nth-child(2) &__imgWrap img {width: 118px; left: 20px}
+			 &:nth-child(3) &__imgWrap img {width: 160px; left: 7px;}
+			 &:nth-child(4) &__imgWrap img {width: 110px; left: 23px}
+	    }
 		h3 {
 			font: 22px $rcb;
 			color: $blueD;
@@ -60,10 +75,12 @@
 		}
 
 		@include mh800 {
-	         margin-top: 40px;
+			padding: 40px 0;
+	        margin-top: 40px;
 	    }
-	    @include mh800 {
+	    @include mh700 {
 	         margin-top: 20px;
+	         padding: 20px 0;
 	    }
 	}
 }
@@ -78,6 +95,14 @@
 	h2 {
 		text-align: left;
 		margin-bottom: 20px;
+		font: 55px/55px $rcb;
+		@include mh850 {
+	        font-size: 50px;
+	        line-height: 1;
+	    }
+	    @include mh800 {
+	        font-size: 42px;
+	    }
 	}
 	&__comp {
 		background-image: url("../images/comp_divide.png");
@@ -104,9 +129,15 @@
 				display: inline-block; vertical-align: middle;
 			}
 		}
+		@include mh750 {
+	        margin-bottom: 40px;
+	    }
 	}
 	.slick-dots {
 		bottom: -60px;
+		@include mh750 {
+	        bottom: -40px;
+	    }
 	}
 }
 
@@ -121,6 +152,9 @@
 		margin-bottom: 20px; 
 		color: $blueD; 
 		text-align: left;
+		@include mh800 {
+	        margin-bottom: 10px;
+	    }
 		&:before {
 			content: "";
 			display: inline-block;
@@ -148,6 +182,14 @@
 		}
 		&:hover h4      {text-decoration: none;}
 		&:hover h4 span {color: $blue;}
+		@include mh850 {
+	        padding: 15px 20px;
+	        margin-bottom: 10px;
+	    }
+	    @include mh800 {
+	        padding: 10px 20px;
+	        margin-bottom: 4px;
+	    }
 		h4 {
 			font: 18px/22px $rcb;
 			margin-bottom: 15px;
@@ -157,11 +199,18 @@
 				color: $blueD;
 				padding-bottom: 2px;
 			}
+			@include mh800 {
+		        margin-bottom: 10px;
+		    }
 		}
 		p {
 			font: 16px/20px $rcli;
 			color: #6E6869;
-			margin-bottom: 20px;		
+			margin-bottom: 20px;	
+			@include mh750 {
+		        font: 15px/18px $rcli;
+		        margin-bottom: 15px;
+		    }	
 		}
 		&__date ,
 		a {
@@ -169,6 +218,9 @@
 			font: 16px/20px $rcli;
 			color: #BABABA;
 			@include transition(all, 0s);
+			@include mh750 {
+		        font: 15px/18px $rcli;
+		    }
 		}
 		a {
 			color: $blue;
@@ -179,6 +231,9 @@
 	}
 	.button {
 		margin-top: 20px;
+		@include mh850 {
+	        margin-top: 10px;
+	    }
 	}
 }
 

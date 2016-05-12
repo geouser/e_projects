@@ -82,6 +82,9 @@ h2 {
     @include mh800 {
          font: 46px/50px $rcb;
     }
+    @include mh700 {
+         font: 38px/42px $rcb;
+    }
 }
 h3 {
     font: 22px $rcb;
@@ -134,6 +137,9 @@ strong {
     @include mh800 {
          font: 18px/24px $rcl;
     }
+    @include mh700 {
+         font: 16px/22px $rcl;
+    }
 }
 p a,
 h2 a,
@@ -149,8 +155,8 @@ h2 img {
     margin: 0 auto 15px;
 }
 ul.list,
-.single ul:not(.breadcrumbs),
-.single ul:not(nav ul) {
+article ul,
+article ul:not(.breadcrumbs) {
     list-style-type: none;
     li {
         margin-bottom: 10px;
@@ -222,6 +228,11 @@ blockquote {
             background-color: $blue;
         }
     }
+    @include mh750 {
+        width: 320px;
+        padding: 15px 0 14px;
+        font-size: 20px;
+    }
 }
 
 /* down_button */
@@ -246,6 +257,15 @@ blockquote {
         margin-left: -4px;
         border-left: 1px solid $blue;
         border-bottom: 1px solid $blue;
+        @include mh800 {
+           bottom: -10px;
+        }
+    }
+    @include mh800 {
+       bottom: 35px;
+    }
+    @include mh700 {
+       bottom: 20px;
     }
 }
 
@@ -546,11 +566,22 @@ section {
             text-align: left;
             margin-bottom: 20px;
         }
+        &.whitePadding {margin-top: 0;}
     }
     > div:nth-of-type(2){
         width: 335px;
         display: inline-block;
         vertical-align: top;
+        &.whitePadding {margin-top: 0;}
+    }
+    h2 {
+        font: 45px/55px $rcb;
+        margin-bottom: 30px;
+        img {
+            display: inline-block;
+            vertical-align: top;
+            margin: 7px 15px 0 0;
+        }
     }
 }
 
