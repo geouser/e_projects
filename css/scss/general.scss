@@ -707,6 +707,16 @@ aside {
     }
 }
 
+.arrowDown {
+    display: block;
+    margin: 25px auto 0;
+    width: 16px;
+    height: 8px;
+    background-image: url("../images/arrowDown.png");
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
 @import 'main';
 @import 'benefits';
 @import 'service';
