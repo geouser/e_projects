@@ -1,9 +1,48 @@
-.blogSection {
-	.wrapper {width: 1060px;}
+.single {
+    padding-bottom: 200px;
+    position: relative;
+    .wrapper {
+    	width: 1080px;
+	    @include m1200 {
+	        width: 100%;
+	        padding: 0  10px;
+	    }
+    }
+    section {
+        margin-top: 80px;
+        @include m1200 {
+	        margin-top: 0;
+	    }
+    }
 }
+main {
+    width: 64%;
+    display: inline-block;
+    vertical-align: top;
+    @include m1200 {
+        width: 100%;
+    }
+}
+article {
+    text-align: left;
+}
+aside {
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3%;
+    @include m1200 {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+
 .blog {
 	padding-top: 55px;
 	@include flex($alignI: start, $justify: space-between, $wrap : wrap);
+	@include m1000 {
+        @include flex($justify: space-around, $wrap : wrap, $alignI: start);
+    }
 	h2 {
 		width: 100%;
 		max-width: 100%;
@@ -26,7 +65,7 @@
 		}
 	}
 	&__article {
-		width: 31.5%;
+		width: 315px;
 		@extend %shadow;
 		min-height: 390px;
 		margin-bottom: 18px;
@@ -118,6 +157,7 @@ aside {
     vertical-align: top;
     margin-left: 3%;
 }
+
 .breadcrumbs {
     text-align: left;
     li {

@@ -256,8 +256,21 @@
   }
 }
 
+@mixin m600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+
 @mixin m800 {
   @media (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin m1000 {
+  @media (max-width: 1000px) {
     @content;
   }
 }

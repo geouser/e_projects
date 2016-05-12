@@ -15,10 +15,20 @@
 	@include mh750 {
 	    margin-top: 20px;
 	}
+	@include m1000 {
+	    @include flex($wrap: wrap);
+	}
 	&__item {
 		width: 30%;
 		text-align: left;
 		color: $blueD;
+		@include m1000 {
+		    width: 60%;
+		    margin: 20px auto;
+		}
+		@include m600 {
+		    width: 100%;
+		}
 		&__iconLi {
 			@extend .you_get__feature;	
 			width: 100%;
