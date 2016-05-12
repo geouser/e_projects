@@ -1,3 +1,11 @@
+.service-page {
+	.offer {
+		.subtitle {
+			margin: 16px auto 38px;
+		}
+	}
+}
+
 .designInfo {
 	@include flex($alignI: start, $justify: space-between);
 	margin-top: 50px;

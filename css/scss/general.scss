@@ -143,6 +143,11 @@ h4 a {
     display: inline-block;
     border-bottom: 1px solid $blue;
 }
+h2 img {
+    display: block;
+    text-align: center;
+    margin: 0 auto 15px;
+}
 ul.list,
 .single ul:not(.breadcrumbs),
 .single ul:not(nav ul) {
@@ -717,6 +722,53 @@ aside {
     background-size: 100% 100%;
     cursor: pointer;
 }
+
+
+/*---------------------- 
+    BACKGROUNDS
+------------------------*/
+.benefits-page,
+.service-page {
+    background-image: url(../images/bg-2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.main-page,
+.service-page section:nth-of-type(2) {
+    background-image: url(../images/bg-1.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.service-page section:nth-of-type(2) {
+    background-attachment: scroll;
+}
+
+.questionBg {
+    background-image: url(../images/question_signs.png);
+    background-size: 988px;
+    background-repeat: no-repeat;
+    background-position: 50% 100px;
+}
+
+.exclamationBg {
+    background-image: url(../images/exclamation_signs.png);
+    background-size: 963px;
+    background-repeat: no-repeat;
+    background-position: 50% 100px;
+}
+
+.plusBg {
+    background-image: url(../images/plus_signs.png);
+    background-size: 989px;
+    background-repeat: no-repeat;
+    background-position: 50% 100px;
+}
+
+
 
 @import 'main';
 @import 'benefits';

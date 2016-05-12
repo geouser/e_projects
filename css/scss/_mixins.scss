@@ -285,6 +285,12 @@
   }
 }
 
+@mixin mh750 {
+  @media (max-height: 750px) {
+    @content;
+  }
+}
+
 @mixin mh700 {
   @media (max-height: 700px) {
     @content;
