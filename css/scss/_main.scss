@@ -23,9 +23,6 @@
 		@extend %shadow;  
 		background-color: #FCFDFD;
 		@include transition(all, .2s);
-		@include mh700 {
-			width: 20%;
-		}
 		&:hover {
 			@include transform(scale(1.04));
 			background-color: #FFF;
@@ -64,6 +61,9 @@
 		h3 {
 			font: 22px $rcb;
 			color: $blueD;
+			@include mh700 {
+				font: 18px/18px $rcb;
+		    }
 		}
 		a {
 			@include position(absolute, auto, 0, 15px, 0);
@@ -72,16 +72,19 @@
 			color: $blue;
 			opacity: 0;
 			@include transition(all, .2s);
+			@include mh700 {
+				font: 14px/14px $rcli;
+				bottom: 10px;
+		    }
 		}
-
 		@include mh800 {
 			padding: 40px 0;
 	        margin-top: 40px;
 	    }
-	    @include mh700 {
-	         margin-top: 20px;
-	         padding: 20px 0;
-	    }
+		@include mh700 {
+			width: 20%;
+			padding: 35px 0;
+		}
 	}
 }
 
@@ -102,6 +105,9 @@
 	    }
 	    @include mh800 {
 	        font-size: 42px;
+	    }
+	    @include mh660 {
+	        font-size: 40px;
 	    }
 	}
 	&__comp {
@@ -190,6 +196,9 @@
 	        padding: 10px 20px;
 	        margin-bottom: 4px;
 	    }
+	    @include mh660 {
+	        padding: 6px 15px;
+	    }
 		h4 {
 			font: 18px/22px $rcb;
 			margin-bottom: 15px;
@@ -201,6 +210,10 @@
 			}
 			@include mh800 {
 		        margin-bottom: 10px;
+		    }
+		    @include mh700 {
+		       	font: 16px/20px $rcb;
+		       	margin-bottom: 6px;
 		    }
 		}
 		p {
@@ -245,9 +258,14 @@
 	margin-bottom: 0;
 	padding: 10px 0px 30px;
 	overflow: visible;
+	@include mh900 {
+        margin-top: 0;
+        padding-top: 0;
+    }
 	@include mh800 {
          margin-top: 10px;
     }
+    &__slide {text-align: center;}
 	&__item {
 		width: 324px; height: 380px;
 		@extend %shadow;  
@@ -255,6 +273,7 @@
 		position: relative;
 		margin: 20px 10px;
 		overflow: hidden;
+		display: inline-block;
 		@include transition(all, .2s);
 		&:hover {
 			@include transform(scale(1.04));
@@ -294,12 +313,30 @@
 		&:hover &__info {
 			bottom: 0;
 		}
+		@include mh900 {
+	        height: 340px;
+	        width: 290px !important;
+	    }
+	    @include mh800 {
+	        height: 300px;
+	        width: 256px !important;
+	    }
+	    @include mh750 {
+	        height: 270px;
+			width: 230px !important;
+	    }
 	}
 	.slick-dots {
 		bottom: -15px;
 	}
 	+ .button {
 		margin-top: 25px;
+		@include mh750 {
+	        padding-bottom: 10px;
+	    }
 	}
+	@include mh750 {
+        padding-bottom: 10px;
+    }
 }
 

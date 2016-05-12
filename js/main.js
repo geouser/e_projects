@@ -139,7 +139,15 @@ $('.doneProjects').slick({
   arrows: true,
   dots: true,
   slidesToShow: 3,
-  slidesToScroll: 3
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4
+      }
+    }]
 });
 
 });
