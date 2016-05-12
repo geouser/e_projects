@@ -76,11 +76,19 @@ h2 {
     text-transform: uppercase;
     max-width: 680px;
     color: $blueD;
+    img {
+        display: block;
+        text-align: center;
+        margin: 0 auto 15px;
+        @include mh750 {
+            max-width: 80px;
+        }
+    }
     @include mh850 {
          font: 50px/55px $rcb;
     }
     @include mh800 {
-         font: 46px/50px $rcb;
+         font: 46px/48px $rcb;
     }
     @include mh700 {
          font: 38px/42px $rcb;
@@ -150,11 +158,7 @@ h4 a {
     display: inline-block;
     border-bottom: 1px solid $blue;
 }
-h2 img {
-    display: block;
-    text-align: center;
-    margin: 0 auto 15px;
-}
+
 ul.list,
 article ul,
 article ul:not(.breadcrumbs) {
@@ -288,7 +292,7 @@ header {
         height: 100%;
     }
     @include mh750 {
-        height: 70px;
+        height: 60px;
     }
     @include mh660 {
         height: 50px;
