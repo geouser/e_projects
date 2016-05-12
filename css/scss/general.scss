@@ -806,6 +806,12 @@ aside {
 
 
 
+@media (max-width: 1200px) {
+   .fullpage {padding-top: 100px;}
+ }
+
+
+
 @import 'main';
 @import 'benefits';
 @import 'service';

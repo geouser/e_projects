@@ -61,6 +61,11 @@ p {
 	width: 1000px;
 	margin: 0 auto;
 	text-align: center;
+	@media (max-width: 1020px) {
+	   width: 100%;
+	   padding-left: 10px;
+	   padding-right: 10px;
+	 }
 }
 header {
 
