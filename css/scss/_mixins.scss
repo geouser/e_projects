@@ -147,7 +147,7 @@
 @mixin transform($transforms){
   -webkit-transform:  $transforms;
    -ms-transform:  $transforms;
-   transform: $transforms rotate(0.02deg);
+   transform: $transforms;
 }
 
 
