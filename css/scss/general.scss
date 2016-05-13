@@ -863,11 +863,6 @@ section {
     .fullpage {padding-top: 70px; }
 }
 
-.mix[style*="display: inline-block"]:nth-of-type(3) {
-    background: red;
-}
-
-
 @import 'main';
 @import 'benefits';
 @import 'service';

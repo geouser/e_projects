@@ -121,6 +121,9 @@ $(function(){
 $('.scrollBar').perfectScrollbar({
   suppressScrollX: true
 });
+$(window).resize(function(event) {
+  $('.scrollBar').perfectScrollbar('update');
+});
 
 
 
