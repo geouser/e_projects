@@ -156,15 +156,39 @@ $('.doneProjects').slick({
   arrows: true,
   dots: true,
   slidesToShow: 3,
-  slidesToScroll: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 7000,
   responsive: [
     {
       breakpoint: 1400,
       settings: {
         slidesToShow: 4,
-        slidesToScroll: 4
+        slidesToScroll: 1
       }
-    }]
+    },
+    {
+      breakpoint: 980,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 750,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 520,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    ]
 });
 
 });

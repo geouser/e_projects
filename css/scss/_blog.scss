@@ -1,3 +1,11 @@
+.blogPage {
+	background-image: url(../images/blog-page.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
 .single {
     padding-bottom: 200px;
     position: relative;
@@ -70,6 +78,7 @@ aside {
 		min-height: 390px;
 		margin-bottom: 18px;
 		border: 15px solid #fff;
+		background-color: #fff;
 		text-align: left;
 		> *:not(.imgWrap) {padding-left: 10px;}
 		@include transition(all, .2s);
