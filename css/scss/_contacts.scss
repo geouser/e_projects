@@ -14,8 +14,28 @@
 		width: calc(100% - 430px);
 		text-align: left;
 
+		@media (max-width: 850px) {
+			& {
+				width: 100%;
+				text-align: center;
+				margin-bottom: 50px;
+				display: block;
+				float: none;
+
+				.subtitle br {
+					display: none;
+				}
+			}
+		}
+
 		h2 {
 			text-align: left;
+
+			@media (max-width: 850px) {
+				& {
+					text-align: center;
+				}
+			}
 		}
 
 		.hours {
@@ -24,6 +44,7 @@
 			color: $blueD;
 			margin-top: 65px;
 			margin-bottom: 29px;
+			display: inline-block;
 		}
 
 		.phones {
@@ -39,6 +60,12 @@
 				color: $blue;
 				font-size: 25px;
 				margin-bottom: 0;
+
+				@media (max-width: 500px) {
+					& {
+						font-size: 22px;
+					}
+				}
 			}
 
 			a {
@@ -46,6 +73,13 @@
 				font-family: $rcb;
 				font-size: 35px;
 				line-height: 40px;
+
+				@media (max-width: 500px) {
+					& {
+						font-size: 25px;
+						line-height: 30px;
+					}
+				}
 			}
 		}
 
@@ -78,6 +112,15 @@
 		.email {
 			border-left: 35px solid transparent;
 			position: relative;
+
+			@media (max-width: 500px) {
+				& {
+					font-size: 18px;
+					&:after {
+						display: none;
+					}
+				}
+			}
 
 			&:before {
 				content: '';
@@ -141,6 +184,25 @@
 			background-position: 50% 50%;
 		}
 
+		@media (max-width: 850px) {
+			& {
+				float: none;
+				display: block;
+				margin: 0 auto;
+				padding: 10px;
+
+				.button {
+					width: 100%;
+				}
+			}
+		}
+
+		@media (max-width: 500px) {
+			& {
+				width: 100%;
+			}
+		}
+
 		.title {
 			font-family: $rcb;
 			font-size: 25px;
@@ -160,6 +222,13 @@
 			padding-left: 72px;
 			margin-bottom: 8px;
 
+			@media (max-width: 500px) {
+				& {
+					height: 55px;
+					padding-left: 50px;
+				}
+			}
+
 			&:before {
 				content: '';
 				width: 72px;
@@ -170,6 +239,12 @@
 				bottom: 0;
 				background-position: 50% 50%;
 				background-repeat: no-repeat;
+
+				@media (max-width: 500px) {
+					& {
+						width: 50px;
+					}
+				}
 			}
 
 			&.name:before {
@@ -194,6 +269,13 @@
 				&::-moz-placeholder          {color:$blueD;}
 				&:-moz-placeholder           {color:$blueD;}
 				&:-ms-input-placeholder      {color:$blueD;}
+
+				@media (max-width: 500px) {
+					& {
+						font-size: 18px;
+						padding-left: 5px;
+					}
+				}
 			}
 		}
 
@@ -213,6 +295,13 @@
 			&::-moz-placeholder          {color:$blueD;}
 			&:-moz-placeholder           {color:$blueD;}
 			&:-ms-input-placeholder      {color:$blueD;}
+
+			@media (max-width: 500px) {
+				& {
+					padding: 5px;
+					font-size: 18px;
+				}
+			}
 		}
 
 		.thanks {
@@ -222,5 +311,6 @@
 			margin-top: 17px;
 			margin-bottom: 0;
 		}
+
 	}
 }
