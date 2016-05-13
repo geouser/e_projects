@@ -530,6 +530,14 @@ section {
         display: none;
     }
 }
+.slick-dots {
+    @media (max-width: 1100px) {
+        display: inline-block!important;
+        width: auto;
+        position: static;
+        margin: 0;
+    }
+}
 .slick-arrow {
     @include transition(all, 0.2s);
     width: 65px; height: 65px;
@@ -555,6 +563,21 @@ section {
      }
     &.slick-prev {
         left: -110px;
+
+        @media (max-width: 1300px) {
+            & {
+                width: 35px;
+                height: 35px;
+                left: -40px;
+            }
+        }
+        @media (max-width: 1100px) {
+            & {
+                width: 35px;
+                height: 35px;
+                left: -5px;
+            }
+        }
         
         &:before {
             @include transform(rotate(45deg));
@@ -562,6 +585,21 @@ section {
     }
     &.slick-next {
         right: -110px;
+
+        @media (max-width: 1300px) {
+            & {
+                width: 35px;
+                height: 35px;
+                right: -40px;
+            }
+        }
+        @media (max-width: 1100px) {
+            & {
+                width: 35px;
+                height: 35px;
+                right: -5px;
+            }
+        }
 
         &:before {
             @include transform(rotate(-135deg));

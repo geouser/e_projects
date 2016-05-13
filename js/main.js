@@ -168,21 +168,21 @@ $('.doneProjects').slick({
       }
     },
     {
-      breakpoint: 980,
+      breakpoint: 1101,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1
       }
     },
     {
-      breakpoint: 750,
+      breakpoint: 820,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1
       }
     },
     {
-      breakpoint: 520,
+      breakpoint: 600,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
