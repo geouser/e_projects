@@ -210,6 +210,16 @@ blockquote {
         background-size: 100% 100%;
         background-repeat: no-repeat;
     }
+    @media (max-width: 500px) {
+        & {
+            padding-left: 40px;
+            padding-right: 20px;
+
+            &:before {
+                left: 5px;
+            }
+        }
+    }
 }
 
 /*---------------------- 
@@ -530,6 +540,14 @@ section {
         display: none;
     }
 }
+.slick-dots {
+    @media (max-width: 1100px) {
+        display: inline-block!important;
+        width: auto;
+        position: static;
+        margin: 0;
+    }
+}
 .slick-arrow {
     @include transition(all, 0.2s);
     width: 65px; height: 65px;
@@ -555,6 +573,21 @@ section {
      }
     &.slick-prev {
         left: -110px;
+
+        @media (max-width: 1300px) {
+            & {
+                width: 35px;
+                height: 35px;
+                left: -40px;
+            }
+        }
+        @media (max-width: 1100px) {
+            & {
+                width: 35px;
+                height: 35px;
+                left: -5px;
+            }
+        }
         
         &:before {
             @include transform(rotate(45deg));
@@ -562,6 +595,21 @@ section {
     }
     &.slick-next {
         right: -110px;
+
+        @media (max-width: 1300px) {
+            & {
+                width: 35px;
+                height: 35px;
+                right: -40px;
+            }
+        }
+        @media (max-width: 1100px) {
+            & {
+                width: 35px;
+                height: 35px;
+                right: -5px;
+            }
+        }
 
         &:before {
             @include transform(rotate(-135deg));
@@ -857,12 +905,12 @@ section {
    .fullpage {padding-top: 100px; }
    .fp-tableCell,
    .fp-section {height: auto !important;}
-   .fp-section {padding: 0 0 80px 0 !important; margin-bottom: 60px !important;}
+   .fp-section {padding: 0 0 80px 0 !important; margin-bottom: 60px !important; overflow: hidden;}
+   .fp-section:last-child {margin-bottom: 0!important;}
  }
 @include m600 {
     .fullpage {padding-top: 70px; }
 }
-
 
 @import 'main';
 @import 'benefits';

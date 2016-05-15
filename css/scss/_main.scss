@@ -112,6 +112,7 @@
 	width: 550px;
 	text-align: left;
 	margin-top: 25px;
+
 	h2 {
 		text-align: left;
 		margin-bottom: 20px;
@@ -136,7 +137,13 @@
 		background-position: 50% 50%;
 		margin:0 auto 70px;
 		width: 550px;
-		@extend %clearfix;	  
+		@extend %clearfix;	
+
+		@media (max-width: 1100px) {
+			& {
+				text-align: center;
+			}
+		}  
 		&__item {
 			height: 95px;
 			width: 164px;
@@ -181,6 +188,7 @@
 	width: 335px;
 	display: inline-block;
 	vertical-align: top;
+
 	h3 {
 		font: 22px $rcl; 
 		text-transform: uppercase; 
@@ -319,6 +327,12 @@
 	@include mh800 {
          margin-top: 10px;
     }
+    @media (max-width: 1100px) {
+    	& {
+    		padding: 0 30px;
+    		text-align: center;
+    	}
+    }
     &__slide {text-align: center;}
 	&__item {
 		width: 324px; height: 380px;
@@ -329,6 +343,13 @@
 		overflow: hidden;
 		display: inline-block;
 		@include transition(all, .2s);
+
+		@media (max-width: 600px) {
+			& {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
 		&:hover {
 			@include transform(scale(1.04));
 			background-color: #FFF;
