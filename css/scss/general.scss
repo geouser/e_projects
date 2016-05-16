@@ -919,6 +919,13 @@ section {
 section:nth-of-type(1) .wrapper,
 section:nth-of-type(2) .wrapper {opacity: 0; @include transition(all, 1s);}
 
+#modal-popup form {
+    float: none;
+    display: block;
+    margin: 0 auto;
+}
+.mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content {width: auto;}
+
 @import 'main';
 @import 'benefits';
 @import 'service';
