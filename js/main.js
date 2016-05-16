@@ -11,6 +11,10 @@ window.params = {
 
 jQuery(document).ready(function($) {
 
+$('section:nth-of-type(1) .wrapper, section:nth-of-type(2) .wrapper').delay(800)
+  .queue(function () { 
+    $(this).css('opacity', '1'); 
+  });
 
 /*---------------------------
                               Shuffle

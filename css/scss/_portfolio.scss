@@ -29,11 +29,17 @@
 
 			@media (max-width: 850px) {
 				& {
-					height: 30px;
+					height: 35px;
 					padding: 0 12px;
 					margin: 3px;
 					font-size: 16px;
+					margin: 6px;
+					width: 230px;
 				}
+			}
+			@include m600 {
+			    display: block;
+			    margin: 6px auto;
 			}
 
 			&:hover,
