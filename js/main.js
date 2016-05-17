@@ -11,43 +11,49 @@ window.params = {
 
 jQuery(document).ready(function($) {
 
-$('section:nth-of-type(1) .wrapper, section:nth-of-type(2) .wrapper').delay(800)
+/*$('section:nth-of-type(1) .wrapper, section:nth-of-type(2) .wrapper').delay(800)
   .queue(function () { 
     $(this).css('opacity', '1'); 
-  });
+  });*/
 
 /*---------------------------
                               Shuffle
 ---------------------------*/
 
-$(function(){
 
-  // Instantiate MixItUp:
 
-  $('#shuffle__container').mixItUp({
-    animation: {
-      enable: true,
-      perspectiveDistance: '1000px',
-      animateResizeTargets: !0,
-      effects: 'fade scale'
-    }
-  });
+  
 
-  $('#shuffle__container').on('mixEnd', function(e, state){
-    $('.scrollBar').perfectScrollbar('update');
-    var elementsAll = state.$targets;
-    elementsAll.each(function(index, el) {
-      $(this).removeClass('current-left')
-    });
-    var $elementsShow = state.$show;
-    $elementsShow.each(function(index, el) {
-      if ((index+1) % 3 === 0){
-        $(this).addClass('current-left');
+if ( $('#shuffle__container').length > 0 ) {
+  $(function(){
+    // Instantiate MixItUp:
+    $('#shuffle__container').mixItUp({
+      animation: {
+        enable: true,
+        perspectiveDistance: '1000px',
+        animateResizeTargets: !0,
+        effects: 'fade scale'
       }
     });
-  });
 
-});
+    $('#shuffle__container').on('mixEnd', function(e, state){
+      $('.scrollBar').perfectScrollbar('update');
+      var elementsAll = state.$targets;
+      elementsAll.each(function(index, el) {
+        $(this).removeClass('current-left')
+      });
+      var $elementsShow = state.$show;
+      $elementsShow.each(function(index, el) {
+        if ((index+1) % 3 === 0){
+          $(this).addClass('current-left');
+        }
+      });
+    });
+  });
+}
+  
+
+
 
 
 
@@ -107,7 +113,29 @@ $(function(){
 
           //events
           onLeave: function(index, nextIndex, direction){},
-          afterLoad: function(anchorLink, index){},
+          afterLoad: function(anchorLink, index){
+            var loadedSlide = $(this);
+            var elements = $(loadedSlide).find('.animate');
+            var length = elements.length;
+            var i = 0;
+            var interval = 200;
+            var end = interval * length;
+
+            function op(i) {
+              $(elements[i]).css('opacity', '1');
+            }
+
+            var timerId = setInterval(function() {
+              op(i);
+              i++;
+            }, interval);
+
+            setTimeout(function() {
+              clearInterval(timerId);
+            }, end);
+            
+            
+          },
           afterRender: function(){},
           afterResize: function(){},
           afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
