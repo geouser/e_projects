@@ -118,7 +118,7 @@ if ( $('#shuffle__container').length > 0 ) {
             var elements = $(loadedSlide).find('.animate');
             var length = elements.length;
             var i = 0;
-            var interval = 200;
+            var interval = 400;
             var end = interval * length;
 
             function op(i) {
