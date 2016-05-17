@@ -33,6 +33,16 @@
 			color: #A5A5A5;
 			font: 16px $rcl;
 		}
+		&:hover &__imgWrap {
+			img.normal {
+				visibility: hidden;
+				opacity: 0;
+			}
+			img.hovered {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
 		@include mh800 {
 			padding: 40px 0;
 	        margin-top: 40px;
@@ -58,7 +68,17 @@
 			text-align: center;
 			img {
 				@include position(absolute, 0, 0, auto, 0);
+				@include transition (all, 0.3s);
 				margin: auto;
+
+				&.normal {
+					visibility: visible;
+					opacity: 1; 
+				}
+				&.hovered {
+					visibility: hidden;
+					opacity: 0;
+				}
 			}
 			@include mh700 {
 		        height: 75px;
@@ -144,6 +164,7 @@
 			width: 164px;
 			text-align: center;	
 			float: left;
+			position: relative;
 			&:nth-child(3n + 2) {
 				width: 198px;
 			}
@@ -152,10 +173,36 @@
 				display: inline-block; vertical-align: middle;
 				content: "";
 			}
+			&:hover img {
+				&.normal {
+					visibility: hidden;
+					opacity: 0;
+				}
+				&.hovered {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
 			img {
+				@include transition (all, 0.3s);
 				max-width: 90%;
 				max-height: 90%;
-				display: inline-block; vertical-align: middle;
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+
+				&.normal {
+					visibility: visible;
+					opacity: 1;
+				}
+				&.hovered {
+					visibility: hidden;
+					opacity: 0;
+				}
 			}
 		}
 		@include mh750 {
