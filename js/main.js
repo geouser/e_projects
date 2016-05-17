@@ -60,13 +60,12 @@ var fadeInElDelay = [];
 
 $('.fadeIn').each(function(){
   fadeInElements.push(this);
-  fadeInElDelay.push($(this).attr('data-delay'));
+  fadeInElDelay.push($(this).data('delay'));
 });
 
 for(k=0; k <= fadeInElements.length; k++) {
    var style = fadeInElDelay[k];
    style = parseInt(style);
-   style = style / 1000; 
    $(fadeInElements[k]).css('animation-delay', '' + style + 's');
 }
 
