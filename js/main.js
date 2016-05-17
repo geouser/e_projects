@@ -21,7 +21,6 @@ jQuery(document).ready(function($) {
 ---------------------------*/
 
 
-
   
 
 if ( $('#shuffle__container').length > 0 ) {
@@ -52,10 +51,24 @@ if ( $('#shuffle__container').length > 0 ) {
   });
 }
   
+/*---------------------------
+                              set animation delay
+---------------------------*/
+k = 0;
+var fadeInElements = [];
+var fadeInElDelay = [];
 
+$('.fadeIn').each(function(){
+  fadeInElements.push(this);
+  fadeInElDelay.push($(this).attr('data-delay'));
+});
 
-
-
+for(k=0; k <= fadeInElements.length; k++) {
+   var style = fadeInElDelay[k];
+   style = parseInt(style);
+   style = style / 1000; 
+   $(fadeInElements[k]).css('animation-delay', '' + style + 's');
+}
 
 /*---------------------------
                               Fullpage
@@ -115,40 +128,9 @@ if ( $('#shuffle__container').length > 0 ) {
           onLeave: function(index, nextIndex, direction){},
           afterLoad: function(anchorLink, index){
 
-
-
             var loadedSlide = $(this);
-            var elements = $(loadedSlide).find('.animate');
-            var i = 0;
-            var k = 0;
-            var delays = [ ];
-            for (i=0; i <= elements.length; i++) {
-                delays.push($(elements[i]).attr('data-delay'));
-            }
-
-            var counter = 1000;
-            console.log();
-            var myFunction = function(){
-                clearInterval(interval);
-                $(elements[k]).css('opacity', '1');
-                k++;
-                console.log(k);
-                counter = delays[k];
-
-                interval = setInterval(myFunction, counter);
-                 if (k == elements.length) {
-                   clearInterval(interval);
-                   k = 0;
-                   i = 0;
-                }
-            }
-            var interval = setInterval(myFunction, counter);
-
-            if (k == elements.length) {
-                   k = 0;
-                   i = 0;
-                }
-
+            var elements = $(loadedSlide).find('.fadeIn');
+            elements.addClass('animated');
 
           },
           afterRender: function(){},

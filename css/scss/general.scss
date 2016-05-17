@@ -923,14 +923,41 @@ section {
 }
 .mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content {width: auto;}
 
+.fadeIn {
+    opacity: 0;
+}
+.animated {
+  -webkit-animation-duration: 1.5s!important;
+  animation-duration: 1.5s!important;
+  -webkit-animation-fill-mode: both!important;
+  animation-fill-mode: both!important;
+  -webkit-animation-name: fadeIn;
+ animation-name: fadeIn;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
 @import 'main';
 @import 'benefits';
 @import 'service';
 @import 'portfolio';
 @import 'blog';
 @import 'contacts';
-
-.animate {
-    opacity: 0;
-    @include transition(all, 0.5s);
-}
