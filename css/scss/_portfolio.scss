@@ -254,6 +254,8 @@
 
 			.text {
 				@include transition(all, 0.5s);
+				-webkit-transition-delay: .4s; /* Safari */
+                transition-delay: .4s;
 				width: 100%;
 				height: calc(100% - 14px);
 				background-color: $blue;
