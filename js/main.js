@@ -114,30 +114,40 @@ if ( $('#shuffle__container').length > 0 ) {
           //events
           onLeave: function(index, nextIndex, direction){},
           afterLoad: function(anchorLink, index){
+
+
             var loadedSlide = $(this);
+            var elements = $(loadedSlide).find('.animate');
+            var i = 0;
+            var k = 0;
+            var delays = [ ];
+            for (i=0; i <= elements.length; i++) {
+                delays.push($(elements[i]).attr('data-delay'));
+            }
 
-              var elem = [];
-               $(loadedSlide).find('.animate').each(function(i, obj) {
-                  var currentElement = $(obj);
-                  elem[i] = currentElement;
-              });
-               console.log(elem);
+            var counter = 1000;
+            var myFunction = function(){
+                clearInterval(interval);
+                $(elements[k]).css('opacity', '1');
+                k++;
+                console.log(k);
+                counter = delays[k];
 
-              var i = 0;                     //  set your counter to 1
+                interval = setInterval(myFunction, counter);
+                 if (k == elements.length) {
+                   clearInterval(interval);
+                   k = 0;
+                   i = 0;
+                }
+            }
+            var interval = setInterval(myFunction, counter);
 
-              function myLoop () {           //  create a loop function
-                 setTimeout(function () {    //  call a 3s setTimeout when the loop is called
-                    $(elem[i]).css('opacity', '1');
-                    i++;                     //  increment the counter
-                    if (i < elem.length) {            //  if the counter < 10, call the loop function
-                       myLoop();             //  ..  again which will trigger another 
-                    }                        //  ..  setTimeout()
-                 }, 1000 + parseInt(elem[i].attr('data-delay')))
-              }
+            if (k == elements.length) {
+                   k = 0;
+                   i = 0;
+                }
 
-              myLoop();  
-            
-            
+
           },
           afterRender: function(){},
           afterResize: function(){},
