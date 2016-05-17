@@ -116,6 +116,7 @@ if ( $('#shuffle__container').length > 0 ) {
           afterLoad: function(anchorLink, index){
 
 
+
             var loadedSlide = $(this);
             var elements = $(loadedSlide).find('.animate');
             var i = 0;
@@ -126,6 +127,7 @@ if ( $('#shuffle__container').length > 0 ) {
             }
 
             var counter = 1000;
+            console.log();
             var myFunction = function(){
                 clearInterval(interval);
                 $(elements[k]).css('opacity', '1');
