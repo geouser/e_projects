@@ -65,7 +65,6 @@ $('.fadeIn').each(function(){
 
 for(k=0; k <= fadeInElements.length; k++) {
    var style = fadeInElDelay[k];
-   style = parseInt(style);
    $(fadeInElements[k]).css('animation-delay', '' + style + 's');
 }
 
