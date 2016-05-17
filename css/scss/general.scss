@@ -916,10 +916,20 @@ section {
     .fullpage {padding-top: 70px; }
 }
 
-#modal-popup form {
+
+.popup {
+    overflow: hidden;
+}
+.popup form {
     float: none;
     display: block;
     margin: 0 auto;
+
+    @media (max-width: 500px) {
+        & {
+            width: 290px;
+        }
+    }
 }
 .mfp-inline-holder .mfp-content, .mfp-ajax-holder .mfp-content {width: auto;}
 
