@@ -4,6 +4,12 @@
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
+	.wrapper {
+    	width: 1080px;
+    	@media (max-width: 1020px) {
+    		width: 100%;
+    	}
+    }
 }
 .single-page {
 	background-image: url(../images/single-page.jpg);
@@ -41,7 +47,7 @@
 		}
 	}
 	&__article {
-		width: 315px;
+		width: 340px;
 		min-height: 390px;
 		margin-bottom: 18px;
 		padding: 15px;
