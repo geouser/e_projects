@@ -115,21 +115,19 @@ if ( $('#shuffle__container').length > 0 ) {
           onLeave: function(index, nextIndex, direction){},
           afterLoad: function(anchorLink, index){
             var loadedSlide = $(this);
-            
+
               var elem = [];
                $(loadedSlide).find('.animate').each(function(i, obj) {
-                  var currentElement = $(this);
+                  var currentElement = $(obj);
                   elem[i] = currentElement;
               });
+               console.log(elem);
 
               var i = 0;                     //  set your counter to 1
 
               function myLoop () {           //  create a loop function
                  setTimeout(function () {    //  call a 3s setTimeout when the loop is called
                     $(elem[i]).css('opacity', '1');
-                    if(!$(elem[i].attr('data-delay')) == undefined) {
-                      $(elem[i].attr('data-delay', '0'));
-                    }
                     i++;                     //  increment the counter
                     if (i < elem.length) {            //  if the counter < 10, call the loop function
                        myLoop();             //  ..  again which will trigger another 
